@@ -1,13 +1,177 @@
-// body {
-//     font-family: "Museo Sans Cyrl";
-// }
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    max-height: 96px;
+    background-color: rgba(0, 0, 0, 0.72);
+    &__inner,
+    .menu__body,
+    .menu__list,
+    .menu__account,
+    .menu__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__inner {
+        padding: 10px 0;
+        max-height: 96px;
+    }
+    .menu {
+        &__icon {
+            display: none;
+        }
+        &__body {
+            width: 659px;
+        }
+        &__list {
+            width: 399px;
+        }
+        &__link {
+            @include navLinkStyle;
+            border-radius: 16px;
+        }
+        &__account {
+            width: 228px;
+            margin-left: 32px;
+            &__signup,
+            &__login {
+                cursor: pointer;
+            }
+            .menu__link {
+                span {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+    &__logo {
+        img {
+            width: 160px;
+        }
+    }
+}
 
-// .header {
-    
-// }
+@media screen and (max-width: 927px) {
+    .header {
+        .menu {
+            &__icon {
+                z-index: 5;
+                display: block;
+                position: relative;
+                width: 56px;
+                height: 34px;
+                cursor: pointer;
+                span,
+                &::before,
+                &::after {
+                    position: absolute;
+                    right: 0;
+                    height: 6px;
+                    transition: all 0.5s ease 0s;
+                    background-color: #fff;
+                }
+                &::after,
+                &::before {
+                    content: "";
+                    border-radius: 4px;
+                }
+                &::before {
+                    top: 0;
+                    width: 56px;
+                }
+                &::after {
+                    bottom: 0;
+                    width: 24px;
+                }
+                span {
+                    top: 14px;
+                    width: 40px;
+                    border-radius: 4px;
+                }
+                &._active {
+                    span {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    &::before {
+                        top: 60%;
+                        width: 100%;
+                        transform: translateY(-100%) rotate(-45deg) ;
+                    }
+                    &::after {
+                        bottom: 60%;
+                        width: 100%;
+                        transform: translateY(100%) rotate(45deg);
+                    }
+                }
+            }
+            &__body, &__list, &__account {
+                flex-direction: column;
+                justify-content: start;
+            }
+            &__body {
+                position: fixed;
+                top: 96px;
+                left: -100%;
+                width: 100%;
+                height: calc(100% - 96px);
+                background-color: rgba(0, 0, 0, 0.72);
+                padding: 16vh 50px;
+                transition: left 0.3s ease 0s;
+                overflow: auto;
+                &._active {
+                    left: 0;
+                }
+                &::before {
+                    content: "";
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 96px;
+                    z-index: 2;
+                }
+            }
+            &__list > li {
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+            &__link {
+                font-size: 24px;
+            }
+            &__account {
+                margin-left: 0;
+                margin-top: 64px;
+            }
+            &__login {
+                margin-top: 40px;
+            }
+        }
+    }
+}
 
-// @media (max-width: 426px) {
-//     .header {
-        
-//     }
-// }
+@media screen and (max-width: 429px) {
+    .header {
+        max-height: 80px;
+        .menu {
+            &__body {
+                top: 76px;
+                height: calc(100% - 76px);
+                &::before {
+                    height: 80px;
+                }
+            }
+        }
+        &__logo {
+            img {
+                width: 120px;
+            }
+        }
+    }
+}

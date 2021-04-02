@@ -1,11 +1,13 @@
 // Components
 
 @import "base/nullstyle.scss";
-@import "base/fonts.scss";
-@import "base/_common.scss";
+@import "base/fonts";
+@import "base/common";
 
 // Blocks
 
-@import "blocks/_buttons";
-@import "blocks/_header";
-@import "blocks/_footer";
+@import "blocks/buttons";
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/about";
+@import "blocks/footer";

@@ -1,0 +1,88 @@
+.main {
+    margin-top: 192px;
+    &__title {
+        font-family: "Neuropool X Free";
+        font-size: 40px;
+        letter-spacing: 0.16em;
+        line-height: 55px;
+        text-align: center;
+        color: #fff;
+    }
+    &__btn {
+        @include btnStyle;
+        border-radius: 16px;
+        margin: 64px auto 35px;
+        text-transform: uppercase;
+        width: 240px;
+        height: 56px;
+        padding: 16px 24px;
+        font-size: 24px;
+        letter-spacing: 0.08em;
+    }
+}
+
+@media (max-width: 1152px) {
+    .main {
+        margin-top: 176px;
+        &__title {
+            font-size: 32px;
+            line-height: 49px;
+            letter-spacing: 0.12em;
+            text-align: center;
+        }
+        &__btn {
+            width: 208px;
+            height: 48px;
+            padding: 14px 26px;
+            margin: 48px auto 40px;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.06em;
+        }
+        &__img {
+            width: 944px;
+        }
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .main {
+        margin-top: 168px;
+        &__title {
+            font-size: 28px;
+            letter-spacing: 0.08em;
+            line-height: 41px;
+        }
+        &__btn {
+            width: 192px;
+            padding: 14px 16px;
+            margin: 48px auto 37px;
+        }
+        &__img {
+            width: 688px;
+        }
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .main {
+        margin-top: 144px;
+        &__title {
+            font-size: 24px;
+            letter-spacing: 0.06em;
+            line-height: 34px;
+        }
+        &__btn {
+            width: 168px;
+            height: 40px;
+            padding: 11px 15px;
+            margin: 40px auto 47px;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.04em;
+        }
+        &__img {
+            width: 344px;
+        }
+    }
+}

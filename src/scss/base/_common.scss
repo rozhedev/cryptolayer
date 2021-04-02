@@ -1,1 +1,29 @@
 @import "_mixins.scss";
+
+body {
+    background-color: $bgColor;
+    font-family: $mainFont;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1264px;
+}
+
+@media screen and (max-width: 1152px) {
+    .container {
+        max-width: 944px;
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .container {
+        max-width: 688px;
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .container {
+        max-width: 340px;
+    }
+}
