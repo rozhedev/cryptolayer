@@ -2,6 +2,8 @@
 
 // @@include('alert.js');
 
+//  Проверка на моб. устройство
+
 const isMobile = {
     Android: function () {
         return navigator.userAgent.match(/Android/i);
@@ -27,6 +29,8 @@ if (isMobile.any()) {
     document.body.classList.add('_pc');
 }
 
+// Бургер меню
+
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
 if (iconMenu) {
@@ -36,6 +40,8 @@ if (iconMenu) {
         menuBody.classList.toggle('_active');
     });
 }
+
+// Плавная прокрутка при клике
 
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {

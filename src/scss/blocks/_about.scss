@@ -1,0 +1,106 @@
+.about {
+    &__content {
+        @include whiteContainer;
+        width: 1264px;
+        height: 368px;
+        margin: 0 auto;
+    }
+    &__inner {
+        padding: 24px;
+        display: flex;
+    }
+    &__img {
+        width: 106%;
+    }
+    &__paragraph {
+        @include littleDescrStyle;
+        margin-top: 40px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    &__btn {
+        @include btnStyle;
+        margin-top: 40px;
+        width: 192px;
+        height: 48px;
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 1152px) {
+    .about {
+        &__inner {
+            flex-direction: column-reverse;
+            padding: 20px;
+        }
+        &__content {
+            width: 744px;
+            height: 624px;
+        }
+        &__img {
+            width: 704px;
+        }
+        &__descr {
+            margin-top: 20px;
+            text-align: center;
+        }
+        &__paragraph {
+            margin-top: 40px;
+        }
+        &__btn {
+            width: 176px;
+            margin: 24px auto 0;
+        }
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .about {
+        &__content {
+            width: 688px;
+            height: 624px;
+        }
+        &__img {
+            width: 648px;
+        }
+        &__btn {
+            width: 168px;
+            height: 40px;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-top: 40px;
+            img {
+                width: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .about {
+        &__inner {
+            padding: 10px;
+        }
+        &__content {
+            width: 340px;
+            height: 544px;
+        }
+        &__img {
+            width: 320px;
+        }
+        &__paragraph {
+            font-size: 16px;
+            line-height: 19.5px;
+            letter-spacing: 0.02em;
+            margin-top: 28px;
+        }
+        &__btn {
+            margin-top: 40px;
+            font-size: 16px;
+            width: 160px;
+            height: 40px;
+            padding: 11px 16px;
+        }
+    }
+}

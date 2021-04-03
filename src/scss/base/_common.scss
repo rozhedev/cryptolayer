@@ -27,3 +27,31 @@ body {
         max-width: 340px;
     }
 }
+
+.title {
+    margin: 104px auto 80px;
+    color: #fff;
+    font-family: $titleFont;
+    font-size: 36px;
+    letter-spacing: 0.12em;
+    line-height: 28px;
+    text-align: center;
+    @media (max-width: 1152px) {
+        margin: 80px auto 64px;
+        font-size: 32px;
+        letter-spacing: 0.08em;
+        line-height: 25px;
+    }
+    @media (max-width: 927px) {
+        margin: 80px auto 48px;
+        font-size: 28px;
+        letter-spacing: 0.06em;
+        line-height: 22px;
+    }
+    @media (max-width: 429px) {
+        margin: 64px auto 40px;
+        font-size: 24px;
+        line-height: 18px;
+        letter-spacing: 0.04em;
+    }
+}
