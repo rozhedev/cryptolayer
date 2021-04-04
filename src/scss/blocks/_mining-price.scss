@@ -1,0 +1,103 @@
+.price {
+    &__inner {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 320px;
+        height: 360px;
+        background-color: rgba($color: $violet, $alpha: 0.75);
+        border-radius: 16px;
+        padding: 40px;
+        color: #fff;
+        &-title {
+            font-family: $titleFont;
+            font-size: 28px;
+            line-height: 22px;
+            letter-spacing: 0.08em;
+            text-align: center;
+        }
+        &-label {
+            margin-top: 40px;
+            @include littleDescrStyle;
+            color: #fff;
+        }
+        &-crypto {
+            display: flex;
+            align-items: center;
+            width: 42px;
+            margin-top: 32px;
+            &--mt16 {
+                margin-top: 16px;
+            }
+        }
+        &-img {
+            width: 24px;
+        }
+        &-name {
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.08em;
+            margin-left: 16px;
+        }
+        &-tariff {
+            @include littleDescrStyle;
+            color: #fff;
+            margin-top: 72px;
+            &--mt26 {
+                margin-top: 26px;
+            }
+        }
+        &-cost {
+            margin-top: 12px;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: 0.08em;
+            color: $orange;
+            &:first-child {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1152px) {
+    .price {
+        &__inner {
+            width: 848px;
+        }
+        &__item {
+            &:last-child {
+                margin: 48px auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 927px) {
+    .price {
+        &__inner {
+            width: 688px;
+        }
+    }
+}
+
+@media (max-width: 429px) {
+    .price {
+        &__inner {
+            width: 344px;
+        }
+        &__item {
+            margin: 0 auto 40px;
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+    }
+}
