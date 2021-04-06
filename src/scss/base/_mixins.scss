@@ -3,6 +3,7 @@
 @mixin btnStyle {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: $orange;
     color: $bgColor;
     font-weight: 600;

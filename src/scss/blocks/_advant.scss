@@ -1,0 +1,208 @@
+.advant {
+    color: #fff;
+    &__subtitle {
+        width: 960px;
+        margin: 64px auto 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__home,
+    &__cloud {
+        display: flex;
+        &-subtitle {
+            font-family: $titleFont;
+            font-size: 28px;
+            line-height: 22px;
+            letter-spacing: 0.08em;
+        }
+        &-img {
+            display: none;
+        }
+    }
+    &__item {
+        margin-top: 40px;
+        &-title {
+            text-align: center;
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 0.08em;
+        }
+        &-inner {
+            margin-top: 36px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-home,
+        &-cloud {
+            display: flex;
+            width: 560px;
+        }
+        &-cloud {
+            flex-direction: row-reverse;
+        }
+        &-img {
+            width: 64px;
+            height: 64px;
+        }
+        &-descr {
+            width: 480px;
+            font-size: 20px;
+            line-height: 26px;
+            text-align: justify;
+            letter-spacing: 0.08em;
+            &--ml16 {
+                margin-left: 16px;
+            }
+            &--mr16 {
+                margin-right: 16px;
+            }
+        }
+    }
+    &__btn {
+        @include btnStyle;
+        width: 216px;
+        height: 56px;
+        padding: 17px;
+        margin: 56px auto 0;
+    }
+}
+
+@media (max-width: 1152px) {
+    .advant {
+        &__subtitle {
+            width: 800px;
+        }
+        &__home,
+        &__cloud {
+            &-subtitle {
+                letter-spacing: 0.04em;
+            }
+        }
+        &__item {
+            margin-top: 36px;
+            &-title {
+                font-size: 24px;
+                line-height: 29px;
+            }
+            &-inner {
+                margin-top: 32px;
+            }
+            &-home,
+            &-cloud {
+                width: 420px;
+            }
+            &-descr {
+                width: 344px;
+                &--ml16 {
+                    margin-left: 12px;
+                }
+                &--mr16 {
+                    margin-right: 12px;
+                }
+            }
+        }
+        &__btn {
+            width: 192px;
+            height: 48px;
+            padding: 15px;
+            margin: 48px auto 0;
+            font-size: 18px;
+            line-height: 22px;
+            img {
+                width: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 926px) {
+    .advant {
+        &__subtitle {
+            width: 640px;
+        }
+        &__home,
+        &__cloud {
+            &-subtitle {
+                font-size: 24px;
+            }
+        }
+        &__item {
+            margin: 40px auto;
+            &-title {
+                font-size: 22px;
+                letter-spacing: 0.06em;
+            }
+            &-inner {
+                margin-top: 28px;
+            }
+            &-home,
+            &-cloud {
+                flex-direction: column;
+                align-items: center;
+                width: 304px;
+            }
+            &-descr {
+                width: 304px;
+                &--ml16 {
+                    margin: 24px 0 0 0;
+                }
+                &--mr16 {
+                    margin: 24px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .advant {
+        &__subtitle {
+            margin-top: 48px;
+            flex-direction: column;
+            width: 216px;
+        }
+        &__home,
+        &__cloud {
+            display: flex;
+            justify-content: space-between;
+            &-subtitle {
+                font-size: 20px;
+                letter-spacing: 0.02em;
+            }
+            &-img {
+                display: block;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__cloud {
+            margin-top: 24px;
+        }
+        &__item {
+            &-title {
+                font-size: 22px;
+                letter-spacing: 0.06em;
+            }
+            &-inner {
+                margin-top: 0;
+                flex-direction: column;
+            }
+            &-home,
+            &-cloud {
+                flex-direction: column;
+                align-items: center;
+                width: 320px;
+                margin: 32px auto 0;
+            }
+            &-descr {
+                width: 320px;
+                &--ml16 {
+                    margin: 16px 0 0 0;
+                }
+                &--mr16 {
+                    margin: 16px 0 0 0;
+                }
+            }
+        }
+    }
+}
