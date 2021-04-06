@@ -86,7 +86,7 @@
             @include littleDescrStyle;
             color: #fff;
             width: 368px;
-            &-item--mt54 {
+            &-item:nth-child(2) {
                 margin-top: 32px;
             }
         }

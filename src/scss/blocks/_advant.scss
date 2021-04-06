@@ -36,6 +36,7 @@
         &-cloud {
             display: flex;
             width: 560px;
+            column-gap: 16px;
         }
         &-cloud {
             flex-direction: row-reverse;
@@ -50,12 +51,6 @@
             width: 480px;
             line-height: 26px;
             text-align: justify;
-            &--ml16 {
-                margin-left: 16px;
-            }
-            &--mr16 {
-                margin-right: 16px;
-            }
         }
     }
     &__btn {
@@ -90,15 +85,10 @@
             &-home,
             &-cloud {
                 width: 420px;
+                column-gap: 12px;
             }
             &-descr {
                 width: 344px;
-                &--ml16 {
-                    margin-left: 12px;
-                }
-                &--mr16 {
-                    margin-right: 12px;
-                }
             }
         }
         &__btn {
@@ -140,15 +130,10 @@
                 flex-direction: column;
                 align-items: center;
                 width: 304px;
+                row-gap: 24px;
             }
             &-descr {
                 width: 304px;
-                &--ml16 {
-                    margin: 24px 0 0 0;
-                }
-                &--mr16 {
-                    margin: 24px 0 0 0;
-                }
             }
         }
     }
@@ -193,15 +178,10 @@
                 align-items: center;
                 width: 320px;
                 margin: 28px auto 0;
+                row-gap: 16px;
             }
             &-descr {
                 width: 320px;
-                &--ml16 {
-                    margin: 16px 0 0 0;
-                }
-                &--mr16 {
-                    margin: 16px 0 0 0;
-                }
             }
         }
     }

@@ -56,3 +56,11 @@ body {
         letter-spacing: 0.04em;
     }
 }
+
+.link {
+    color: $blue;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}

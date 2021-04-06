@@ -1,0 +1,103 @@
+.our-partners {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.questions {
+    @include whiteContainer;
+    width: 944px;
+    height: 168px;
+    margin: 104px auto 0;
+    padding: 36px 55px;
+    text-align: center;
+    &__title {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: 0.12em;
+    }
+    &__descr,
+    &__link {
+        margin-top: 32px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.08em;
+    }
+}
+
+@media (max-width: 1152px) {
+    .our-partners {
+        &__inner {
+            justify-content: space-around;
+            width: 800px;
+            margin: 0 auto;
+            row-gap: 48px;
+        }
+    }
+    .questions {
+        margin: 64px auto 0;
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .our-partners {
+        &__inner {
+            justify-content: space-around;
+            width: 600px;
+            row-gap: 48px;
+        }
+    }
+    .questions {
+        width: 688px;
+        height: 144px;
+        padding: 32px 20px;
+        text-align: center;
+        &__title {
+            font-size: 28px;
+            line-height: 34px;
+            letter-spacing: 0.08em;
+        }
+        &__descr,
+        &__link {
+            margin-top: 24px;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.04em;
+        }
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .our-partners {
+        .title {
+            margin-bottom: 64px;
+        }
+        &__inner {
+            justify-content: center;
+            width: 320px;
+            row-gap: 40px;
+        }
+    }
+    .questions {
+        width: 340px;
+        height: 153px;
+        padding: 32px 27px;
+        text-align: center;
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.04em;
+        }
+        &__descr,
+        &__link {
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.02em;
+        }
+    }
+}

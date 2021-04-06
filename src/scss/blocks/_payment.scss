@@ -47,6 +47,9 @@
             }
             &--order2 {
                 order: 2;
+                img {
+                    height: 52px;
+                }
             }
             &--order3 {
                 order: 3;
@@ -56,6 +59,9 @@
             }
             &--order5 {
                 order: 5;
+                img {
+                    height: 52px;
+                }
             }
             &--order6 {
                 order: 6;
@@ -81,9 +87,6 @@
         }
         &__text {
             font-size: 16px;
-        }
-        &__img--card {
-            height: 52px;
         }
         &__text {
             margin-top: 16px;
