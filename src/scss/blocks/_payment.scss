@@ -1,0 +1,93 @@
+.payment {
+    &__inner {
+        width: 976px;
+        margin: 0 auto;
+    }
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 160px;
+        @include whiteContainer;
+        padding: 32px 40px;
+    }
+    &__text {
+        @include littleDescrStyle;
+        color: #fff;
+        margin-top: 40px;
+        text-align: right;
+        span {
+            color: $orange;
+        }
+    }
+}
+
+@media (max-width: 1152px) {
+    .payment {
+        &__inner {
+            width: 944px;
+        }
+    }
+}
+
+@media screen and (max-width: 926px) {
+    .payment {
+        &__inner {
+            width: 560px;
+        }
+        &__icons {
+            height: 280px;
+            padding: 20px 36px;
+        }
+        &__item {
+            margin: 12px 20px;
+            &--order1 {
+                order: 1;
+            }
+            &--order2 {
+                order: 2;
+            }
+            &--order3 {
+                order: 3;
+            }
+            &--order4 {
+                order: 4;
+            }
+            &--order5 {
+                order: 5;
+            }
+            &--order6 {
+                order: 6;
+            }
+        }
+    }
+}
+
+@media (max-width: 429px) {
+    .payment {
+        &__inner {
+            width: 344px;
+        }
+        &__icons {
+            height: 248px;
+            padding: 16px;
+        }
+        &__item {
+            margin: 12px;
+            img {
+                width: 80px;
+            }
+        }
+        &__text {
+            font-size: 16px;
+        }
+        &__img--card {
+            height: 52px;
+        }
+        &__text {
+            margin-top: 16px;
+            line-height: 20px;
+        }
+    }
+}
