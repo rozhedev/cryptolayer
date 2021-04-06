@@ -1,0 +1,122 @@
+.partner {
+    color: #fff;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img {
+        position: relative;
+        width: 464px;
+        height: 368px;
+        &-item {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 128px;
+            height: 128px;
+            background-color: $orange;
+            border-radius: 16px;
+            font-size: 36px;
+            line-height: 28px;
+            letter-spacing: 0.12em;
+            font-family: $titleFont;
+            &--1 {
+                bottom: 0;
+                left: 0;
+            }
+            &--2 {
+                top: 120px;
+                left: 168px;
+                opacity: 0.85;
+            }
+            &--3 {
+                top: 0;
+                right: 0;
+                opacity: 0.7;
+            }
+        }
+    }
+    &__descr {
+        @include bigDescrStyle;
+        color: #fff;
+        width: 712px;
+        line-height: 150%;
+        &-item--mt54 {
+            margin-top: 54px;
+        }
+    }
+}
+
+@media (max-width: 1152px) {
+    .partner {
+        &__img {
+            width: 368px;
+            height: 508px;
+            &-item {
+                &--2 {
+                    top: 190px;
+                    left: 120px;
+                }
+            }
+        }
+        &__descr {
+            width: 512px;
+            &-item--mt54 {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 927px) {
+    .partner {
+        &__img {
+            width: 260px;
+            height: 506px;
+            &-item {
+                &--2 {
+                    top: 189px;
+                    left: 66px;
+                }
+            }
+        }
+        &__descr {
+            @include littleDescrStyle;
+            color: #fff;
+            width: 368px;
+            &-item--mt54 {
+                margin-top: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 429px) {
+    .partner {
+        &__inner {
+            flex-direction: column;
+        }
+        &__img {
+            width: 312px;
+            height: 392px;
+            &-item {
+                width: 104px;
+                height: 104px;
+                font-size: 32px;
+                line-height: 25px;
+                letter-spacing: 0.08em;
+                &--2 {
+                    top: 144px;
+                    left: 104px;
+                }
+            }
+        }
+        &__descr {
+            width: 320px;
+            text-align: justify;
+            margin-top: 40px;
+        }
+    }
+}

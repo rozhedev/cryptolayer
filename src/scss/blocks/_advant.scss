@@ -45,11 +45,11 @@
             height: 64px;
         }
         &-descr {
+            @include bigDescrStyle;
+            color: #fff;
             width: 480px;
-            font-size: 20px;
             line-height: 26px;
             text-align: justify;
-            letter-spacing: 0.08em;
             &--ml16 {
                 margin-left: 16px;
             }
@@ -115,7 +115,7 @@
     }
 }
 
-@media screen and (max-width: 926px) {
+@media screen and (max-width: 927px) {
     .advant {
         &__subtitle {
             width: 640px;
