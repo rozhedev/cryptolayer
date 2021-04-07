@@ -59,6 +59,9 @@
         height: 56px;
         padding: 17px;
         margin: 56px auto 0;
+        &:hover {
+            box-shadow: 0 0 4px 4px #fff;
+        }
     }
 }
 

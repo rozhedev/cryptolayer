@@ -40,10 +40,11 @@
     }
     &__descr {
         @include bigDescrStyle;
+        text-align: justify;
         color: #fff;
         width: 712px;
         line-height: 150%;
-        &-item--mt54 {
+        &-item:nth-child(2) {
             margin-top: 54px;
         }
     }
@@ -63,7 +64,7 @@
         }
         &__descr {
             width: 512px;
-            &-item--mt54 {
+            &-item:nth-child(2) {
                 margin-top: 40px;
             }
         }
