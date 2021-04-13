@@ -1,0 +1,147 @@
+.faq {
+    margin-top: 176px;
+    color: #fff;
+    .title {
+        margin-bottom: 48px;
+    }
+
+    &__tabs {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 544px;
+        &-btn {
+            @include btnStyle;
+            letter-spacing: 0;
+            height: 64px;
+            padding: 24px;
+            background-color: rgba($color: $orange, $alpha: 0.8);
+            color: #fff;
+            cursor: pointer;
+            &:hover {
+                color: $bgColor;
+                background-color: $orange;
+                box-shadow: 0 0 8px 2px $orange;
+            }
+        }
+    }
+    &__general,
+    &__financial {
+        display: grid;
+        grid-template: repeat(2, 320px) / repeat(3, 360px);
+        gap: 64px 92px;
+        margin-top: 64px;
+    }
+    // .active-tab {
+    //     display: grid;
+    // }
+    &__item {
+        background-color: rgba($color: $blue, $alpha: 0.8);
+        border-radius: 16px;
+        padding: 16px 24px;
+        position: relative;
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        &-question {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+        &-more {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+        }
+        &-answer {
+            margin-top: 24px;
+            @include littleDescrStyle;
+            line-height: 22px;
+            text-align: justify;
+            color: #fff;
+        }
+        &-link {
+            text-decoration: underline;
+            display: block;
+            color: $orange;
+            margin-top: 24px;
+            transition: 0.5s all;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1152px) {
+    .faq {
+        &__general,
+        &__financial {
+            display: grid;
+            grid-template: repeat(3, 320px) / repeat(2, 360px);
+            gap: 56px 80px;
+            margin: 56px auto 0;
+            width: 800px;
+        }
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .faq {
+        margin-top: 154px;
+        &__tabs {
+            width: 488px;
+            &-btn {
+                height: 48px;
+                padding: 15px 25px;
+            }
+        }
+        &__general,
+        &__financial {
+            grid-template: repeat(3, 320px) / repeat(2, 320px);
+            gap: 48px;
+            margin-top: 48px;
+            width: 688px;
+        }
+        &__item {
+            padding: 16px;
+            width: 320px;
+            &-question {
+                font-size: 18px;
+                line-height: 22px;
+            }
+            &-more {
+                right: 12px;
+                top: 12px;
+            }
+            &-answer {
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .faq {
+        &__tabs {
+            width: 216px;
+            flex-direction: column;
+            &-btn {
+                padding: 15px 27px;
+                margin: 0 auto;
+                width: 208px;
+                &:nth-child(2) {
+                    margin-top: 32px;
+                    width: 216px;
+                }
+            }
+        }
+        &__general,
+        &__financial {
+            grid-template: 320px / 320px;
+            width: 320px;
+        }
+    }
+}

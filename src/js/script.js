@@ -1,6 +1,7 @@
 "use strict"
 
-// @@include('alert.js');
+// @@include('_header.js')
+
 
 //  Проверка на моб. устройство
 
@@ -69,4 +70,34 @@ if (menuLinks.length > 0) {
     }
 }
 
-// Калькулятор дохода
+// ТАБЫ
+
+// const tabsBtn = document.querySelectorAll('.faq__tabs-btn');
+// const tabsItems = document.querySelectorAll('.faq__item');
+
+// tabsBtn.forEach(onTabClick);
+
+// function onTabClick(item) {
+//     item.addEventListener('click', function () {
+//         let currentBtn = item;
+//         let tabId = currentBtn.getAttribute('data-tab');
+//         let currentTab = document.querySelector(tabId);
+
+//         if (!currentBtn.classList.contains('active-tab')) {
+//             tabsBtn.forEach(function (item) {
+//                 item.classList.remove('active-tab');
+//                 tabsBtn.classList.remove('active-tab');
+//             });
+
+//             tabsItems.forEach(function (item) {
+//                 item.classList.remove('active-tab');
+//                 tabsItems.classList.remove('actibe-tab')
+//             });
+
+//             currentBtn.classList.add('active-tab');
+//             currentTab.classList.add('active-tab');
+//         }
+//     });
+// }
+
+// document.querySelector('.faq__tabs-btn').click();
