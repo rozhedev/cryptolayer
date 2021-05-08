@@ -25,16 +25,12 @@
             }
         }
     }
-    &__general,
-    &__financial {
+    &__content {
         display: grid;
         grid-template: repeat(2, 320px) / repeat(3, 360px);
         gap: 64px 92px;
         margin-top: 64px;
     }
-    // .active-tab {
-    //     display: grid;
-    // }
     &__item {
         background-color: rgba($color: $blue, $alpha: 0.8);
         border-radius: 16px;
@@ -73,12 +69,17 @@
             }
         }
     }
+    ._show {
+        display: grid;
+    }
+    ._hide {
+        display: none;
+    }
 }
 
 @media (max-width: 1152px) {
     .faq {
-        &__general,
-        &__financial {
+        &__content {
             display: grid;
             grid-template: repeat(3, 320px) / repeat(2, 360px);
             gap: 56px 80px;
@@ -98,8 +99,7 @@
                 padding: 15px 25px;
             }
         }
-        &__general,
-        &__financial {
+        &__content {
             grid-template: repeat(3, 320px) / repeat(2, 320px);
             gap: 48px;
             margin-top: 48px;
@@ -138,8 +138,7 @@
                 }
             }
         }
-        &__general,
-        &__financial {
+        &__content {
             grid-template: 320px / 320px;
             width: 320px;
         }

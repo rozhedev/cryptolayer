@@ -6,6 +6,10 @@ body {
     box-sizing: border-box;
 }
 
+:root {
+    --animate-duration: 2s;
+  }
+
 .container {
     margin: 0 auto;
     max-width: 1264px;
