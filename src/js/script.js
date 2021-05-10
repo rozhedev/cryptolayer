@@ -105,4 +105,41 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
+    //  Accordions
+
+    const faqItems = document.querySelectorAll('.faq__item'),
+        faqItemsHeader = document.querySelectorAll('.faq__item-header');
+
+    faqItemsHeader.forEach((item) => {
+        item.addEventListener('click', () => {
+            const parent = item.parentNode;
+
+            if (parent.classList.contains('faq__item--active')) {
+                parent.classList.remove('faq__item--active');
+
+                if (parent.classList.contains('faq__item--row2')) {
+                    parent.parentNode.classList.remove('faq__content--active2');
+                } 
+                else {
+                    parent.parentNode.classList.remove('faq__content--active1');
+                }
+            } else {
+                faqItems.forEach((child) => {
+                    child.classList.remove('faq__item--active');
+                })
+
+                parent.classList.add('faq__item--active');
+
+                if (parent.classList.contains('faq__item--row2')) {
+                    parent.parentNode.classList.add('faq__content--active2');
+                    parent.parentNode.classList.remove('faq__content--active1');
+                }
+                else {
+                    parent.parentNode.classList.add('faq__content--active1');
+                    parent.parentNode.classList.remove('faq__content--active2');
+                }
+            }
+        })
+    })
 });

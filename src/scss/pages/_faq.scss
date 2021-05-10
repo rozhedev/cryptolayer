@@ -27,16 +27,16 @@
     }
     &__content {
         display: grid;
-        grid-template: repeat(2, 320px) / repeat(3, 360px);
+        grid-template: repeat(2, 88px) / repeat(3, 360px);
         gap: 64px 92px;
         margin-top: 64px;
     }
     &__item {
-        background-color: rgba($color: $blue, $alpha: 0.8);
-        border-radius: 16px;
-        padding: 16px 24px;
         position: relative;
         &-header {
+            background-color: rgba($color: $blue, $alpha: 0.8);
+            border-radius: 16px 16px 0 0;
+            padding: 16px 24px;
             display: flex;
             justify-content: space-between;
             cursor: pointer;
@@ -49,14 +49,20 @@
         &-more {
             position: absolute;
             right: 16px;
-            top: 16px;
+            top: 12px;
+            transition: 0.5s all;
         }
         &-answer {
-            margin-top: 24px;
+            transition: 0.5s all;
+            height: 0;
+            opacity: 0;
+            background-color: rgba($color: $blue, $alpha: 0.8);
             @include littleDescrStyle;
             line-height: 22px;
             text-align: justify;
             color: #fff;
+            border-radius: 0 0 16px 16px;
+            padding: 16px 24px;
         }
         &-link {
             text-decoration: underline;
@@ -69,13 +75,38 @@
             }
         }
     }
-    ._show {
-        display: grid;
+}
+
+// UTILITY CLASSES
+
+.faq__item--active {
+    .faq__item-more {
+        transform: rotate(45deg);
+        transition: 0.5s all;
     }
-    ._hide {
-        display: none;
+    .faq__item-answer {
+        transition: 0.5s all;
+        height: 260px;
+        opacity: 1;
     }
 }
+
+._show {
+    display: grid;
+}
+._hide {
+    display: none;
+}
+
+.faq__content--active1 {
+    grid-template: 320px 88px / repeat(3, 360px);
+}
+
+.faq__content--active2 {
+    grid-template: 88px 320px / repeat(3, 360px);
+}
+
+// MEDIA QUERIES
 
 @media (max-width: 1152px) {
     .faq {
