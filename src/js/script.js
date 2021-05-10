@@ -120,8 +120,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
                 if (parent.classList.contains('faq__item--row2')) {
                     parent.parentNode.classList.remove('faq__content--active2');
-                } 
-                else {
+                } else {
                     parent.parentNode.classList.remove('faq__content--active1');
                 }
             } else {
@@ -134,8 +133,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 if (parent.classList.contains('faq__item--row2')) {
                     parent.parentNode.classList.add('faq__content--active2');
                     parent.parentNode.classList.remove('faq__content--active1');
-                }
-                else {
+                } else {
                     parent.parentNode.classList.add('faq__content--active1');
                     parent.parentNode.classList.remove('faq__content--active2');
                 }

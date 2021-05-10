@@ -112,11 +112,25 @@
     .faq {
         &__content {
             display: grid;
-            grid-template: repeat(3, 320px) / repeat(2, 360px);
+            grid-template: repeat(3, 112px) / repeat(2, 360px);
             gap: 56px 80px;
             margin: 56px auto 0;
             width: 800px;
         }
+    }
+    .faq__content--active1 {
+        grid-template: 320px 320px 88px / repeat(2, 360px);
+    }
+
+    .faq__content--active2 {
+        grid-template: 88px 320px 320px / repeat(2, 360px);
+    }
+
+    ._show {
+        display: grid;
+    }
+    ._hide {
+        display: none;
     }
 }
 
@@ -131,7 +145,7 @@
             }
         }
         &__content {
-            grid-template: repeat(3, 320px) / repeat(2, 320px);
+            grid-template: repeat(3, 88px) / repeat(2, 320px);
             gap: 48px;
             margin-top: 48px;
             width: 688px;
@@ -139,18 +153,36 @@
         &__item {
             padding: 16px;
             width: 320px;
+            &-header {
+                padding: 16px;
+            }
             &-question {
                 font-size: 18px;
                 line-height: 22px;
             }
             &-more {
-                right: 12px;
-                top: 12px;
+                right: 18px;
+                top: 18px;
             }
             &-answer {
                 font-weight: 400;
             }
         }
+    }
+
+    .faq__content--active1 {
+        grid-template: auto / repeat(2, 320px);
+    }
+
+    .faq__content--active2 {
+        grid-template: auto / repeat(2, 320px);
+    }
+
+    ._show {
+        display: grid;
+    }
+    ._hide {
+        display: none;
     }
 }
 
@@ -170,8 +202,36 @@
             }
         }
         &__content {
-            grid-template: 320px / 320px;
+            grid-template: auto / 320px;
             width: 320px;
         }
+        &__item {
+            padding: 0;
+            &-more {
+                right: 10px;
+                top: 10px;
+            }
+        }
+    }
+
+    .faq__item--active {
+        .faq__item-answer {
+            height: 320px;
+        }
+    }
+    
+    .faq__content--active1 {
+        grid-template: auto / 320px;
+    }
+
+    .faq__content--active2 {
+        grid-template: auto / 320px;
+    }
+
+    ._show {
+        display: grid;
+    }
+    ._hide {
+        display: none;
     }
 }
