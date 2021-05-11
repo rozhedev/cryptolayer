@@ -1,11 +1,12 @@
 .header {
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
     max-height: 96px;
     background-color: rgba(0, 0, 0, 0.72);
+    transition: 1s all;
     &__inner,
     .menu__body,
     .menu__list,

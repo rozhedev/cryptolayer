@@ -42,6 +42,17 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Липкое меню
+
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header');
+        if (this.pageYOffset > 1800) {
+            header.style.position = 'fixed';
+        } else {
+            header.style.position = 'static';
+        }
+    });
+
     // Плавная прокрутка при клике
 
     const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
