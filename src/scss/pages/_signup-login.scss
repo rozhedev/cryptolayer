@@ -1,4 +1,4 @@
-.signup {
+.signup{
     margin-top: 160px;
     padding-bottom: 112px;
     .title {
@@ -33,6 +33,39 @@
         }
     }
     &__form {
+        &-control {
+            position: relative;
+        }
+        &-control.success input {
+            border-color: $green;
+        }
+        &-control.error input {
+            border-color: $orange;
+        }
+        &-control i {
+            position: absolute;
+            top: 38px;
+            right: 16px;
+            visibility: hidden;
+        }
+        &-control.success i.fa-check-circle {
+            visibility: visible;
+            color: $green;
+        }
+        &-control.error i.fa-exclamation-circle {
+            visibility: visible;
+            color: $orange;
+        }
+        &-control small {
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            visibility: hidden;
+        }
+        &-control.error small {
+            visibility: visible;
+            color: $orange;
+        }
         &-inp,
         &-terms {
             margin-top: 24px;
@@ -53,6 +86,8 @@
             color: #fff;
         }
         &-terms {
+            cursor: pointer;
+            display: block;
             font-size: 16px;
             line-height: 20px;
             color: #240046;
@@ -69,6 +104,8 @@
         }
     }
 }
+
+// MEDIA FOR SIGN UP
 
 @media (max-width: 1152px) {
     .signup {
@@ -110,12 +147,22 @@
             }
         }
         &__form {
+            &-control i {
+                position: absolute;
+                top: 32px;
+                right: 16px;
+                visibility: hidden;
+            }
             padding: 0 8px;
             &-inp,
             &-terms {
                 margin-top: 20px;
+                span {
+                    margin-left: 0px;
+                }
             }
-            &-captcha, &-btn {
+            &-captcha,
+            &-btn {
                 margin: 20px auto 0;
             }
             &-btn {
@@ -128,16 +175,45 @@
 //  LOGIN
 
 .login {
-    padding-top: 0;
     &__inner {
-        height: 328px;
+        height: 360px;
     }
     &__form {
+        &-control {
+            position: relative;
+        }
+        &-control.success input {
+            border-color: $green;
+        }
+        &-control.error input {
+            border-color: $orange;
+        }
+        &-control i {
+            position: absolute;
+            top: 32px;
+            right: 16px;
+            visibility: hidden;
+        }
+        &-control.success i.fa-check-circle {
+            visibility: visible;
+            color: $green;
+        }
+        &-control.error i.fa-exclamation-circle {
+            visibility: visible;
+            color: $orange;
+        }
+        &-control small {
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            visibility: hidden;
+        }
+        &-control.error small {
+            visibility: visible;
+            color: $orange;
+        }
         &-inp {
-            margin-top: 0;
-            &:nth-child(2) {
-                margin-top: 24px;
-            }
+            margin-top: 20px;
         }
         &-btn {
             padding: 14px 36px;
@@ -145,6 +221,8 @@
         }
     }
 }
+
+// MEDIA FOR LOGIN
 
 @media (max-width: 1152px) {
     .login {
@@ -161,6 +239,12 @@
             height: 328px;
         }
         &__form {
+            &-control i {
+                position: absolute;
+                top: 32px;
+                right: 32px;
+                visibility: hidden;
+            }
             &-inp,
             &-captcha,
             &-btn {

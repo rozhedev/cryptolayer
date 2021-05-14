@@ -17,24 +17,62 @@
         <div class="container">
             <h2 class="title">Sign up</h2>
             <div class="signup__inner animate__animated animate__fadeIn wow">
-                <div class="signup__upline">
-                    <img src="img/common/share.svg" alt="share" class="signup__upline-img">
-                    <div>
-                        You were invited by user<br>
-                        <span class="signup__upline-name">Taras Profvest_com</span>
+                <form action="" class="signup__form" id="signup__form">
+                    <div class="signup__upline">
+                        <img src="img/common/share.svg" alt="share" class="signup__upline-img">
+                        <div>
+                            You were invited by user<br>
+                            <span class="signup__upline-name">Taras Profvest_com</span>
+                        </div>
                     </div>
-                </div>
-                <form action="" class="signup__form">
-                    <input type="text" name="fullname" placeholder="Full Name" id="" class="signup__form-inp">
-                    <input type="text" name="username" id="" placeholder="Username" class="signup__form-inp">
-                    <input type="text" name="email" id="" placeholder="Email" class="signup__form-inp">
-                    <input type="text" name="password" id="" placeholder="Password" class="signup__form-inp">
-                    <input type="text" name="confirm" id="" placeholder="Confirm password" class="signup__form-inp">
+
+                    <div class="signup__form-control">
+                        <input type="text" name="fullname" id="fullname" placeholder="Full Name"
+                            class="signup__form-inp">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="signup__form-control">
+                        <input type="text" name="username" id="username" placeholder="Username"
+                            class="signup__form-inp">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="signup__form-control">
+                        <input type="text" name="email" id="email" placeholder="Email" class="signup__form-inp">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="signup__form-control">
+                        <input type="password" name="password" id="password" placeholder="Password"
+                            class="signup__form-inp">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="signup__form-control">
+                        <input type="password" name="confirm" id="confirm" placeholder="Confirm password"
+                            class="signup__form-inp">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
                     <div class="signup__form-captcha">reCaptcha</div>
-                    <div class="signup__form-terms">
-                        <label><input type="checkbox" name="terms" id="" class="signnu__form-checkbox"><span>I agree
-                                with <a class="signup-link link" href="terms.html">Terms and Conditions</a>  </span></label>
-                    </div>
+                    <label class="signup__form-terms signup__form-control">
+                        <input type="checkbox" name="terms" id="checkbox" class="signup__form-checkbox">
+                        <span>I agree with <a class="signup-link link" href="terms.html">Terms and Conditions</a>
+                        </span>
+                        <small>Error message</small>
+                    </label>
+
                     <button class="signup__form-btn">Create account</button>
                 </form>
             </div>
@@ -42,6 +80,7 @@
     </section>
 
     <script src="https://kit.fontawesome.com/f77f4500aa.js" crossorigin="anonymous"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 

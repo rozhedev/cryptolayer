@@ -17,9 +17,21 @@
         <div class="container">
             <h2 class="title">Log In</h2>
             <div class="signup__inner login__inner animate__animated animate__fadeIn wow">
-                <form action="" class="signup__form login__form">
-                    <input type="text" name="username" id="" placeholder="Username" class="signup__form-inp login__form-inp">
-                    <input type="text" name="password" id="" placeholder="Password" class="signup__form-inp login__form-inp">
+                <form action="" class="login__form" id="login__form">
+                    <div class="login__form-control">
+                        <input type="text" name="username2" id="username2" placeholder="Username"
+                            class="signup__form-inp login__form-inp">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="login__form-control">
+                        <input type="password" name="password2" id="password2" placeholder="Password"
+                        class="signup__form-inp login__form-inp">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
                     <div class="signup__form-captcha login__form-captcha">reCaptcha</div>
                     <button class="signup__form-btn login__form-btn">Log in</button>
                 </form>
@@ -28,6 +40,7 @@
     </section>
 
     <script src="https://kit.fontawesome.com/f77f4500aa.js" crossorigin="anonymous"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 
