@@ -35,10 +35,12 @@ for (let withdrawCur of withdrawCurrencyBtns) {
 
 investAmount.addEventListener('input', function () {
     calcMiningPrice();
+    calcProfit();
 })
 
 periodMining.addEventListener('input', function () {
     checkLimits();
+    calcProfit();
 })
 
 // Выбор нужной валюты
@@ -134,12 +136,17 @@ function calcProfit() {
                     let investAmountVal = +investAmount.value,
                         periodMiningVal = +periodMining.value;
 
-                    resultCalc = (((investAmountVal / (replenishRate / withdrawRate)) * periodMiningVal) * 0.004);
-                    resultIncome = ((((investAmountVal / (replenishRate / withdrawRate)) * periodMiningVal) * 0.004) / 30);
+                    if (replenishRate == withdrawRate) {
+                        resultIncome = investAmountVal * 0.004;
+                        resultCalc = resultIncome * periodMiningVal;
+                    } else if (replenishRate > withdrawRate || replenishRate < withdrawRate) {
+                        resultIncome = (investAmountVal * replenishRate / withdrawRate) * 0.004;
+                        resultCalc = resultIncome * periodMiningVal;
+                    }
 
                     if (withdrawCur.classList.contains('calc__step-currency--orange') || withdrawCur.classList.contains('calc__step-currency--violet') || withdrawCur.classList.contains('calc__step-currency--blue') || withdrawCur.classList.contains('calc__step-currency--green')) {
-                        resultCalc = resultCalc.toFixed(6);
-                        resultIncome = resultIncome.toFixed(6); 
+                        resultCalc = resultCalc.toFixed(7);
+                        resultIncome = resultIncome.toFixed(7);
                     }
                     if (withdrawCur.classList.contains('calc__step-currency--orange')) {
                         profit.textContent = `${resultCalc} BTC`;
