@@ -33,7 +33,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        &-currency {
+        &-currency, &-currency2 {
             width: 64px;
             height: 64px;
             border-radius: 50%;
@@ -42,33 +42,26 @@
             align-items: center;
             cursor: pointer;
             transition: 0.5s all;
+            opacity: 0.72;
             &--little {
                 width: 22px;
+            }
+            &:hover {
+                opacity: 1;
+                box-shadow: 0 0 4px 4px rgba($color: #000000, $alpha: 0.72);
             }
         }
         &-currency--orange {
             background-color: $orange;
-            &:hover {
-                box-shadow: 0 0 4px 4px $orange;
-            }
         }
         &-currency--violet {
             background-color: $violet;
-            &:hover {
-                box-shadow: 0 0 4px 4px $violet;
-            }
         }
         &-currency--blue {
             background-color: $blue;
-            &:hover {
-                box-shadow: 0 0 4px 4px $blue;
-            }
         }
         &-currency--green {
             background-color: $green;
-            &:hover {
-                box-shadow: 0 0 4px 4px $green;
-            }
         }
         &-currency--bgcolor {
             background-color: $bgColor;
@@ -76,9 +69,6 @@
             line-height: 44px;
             letter-spacing: 0.12em;
             color: #ffffff;
-            &:hover {
-                box-shadow: 0 0 4px 4px $bgColor;
-            }
         }
         &-content {
             display: flex;
@@ -133,6 +123,11 @@
             }
         }
     }
+}
+
+._active {
+    opacity: 1;
+    box-shadow: 0 0 4px 4px rgba($color: #000000, $alpha: 0.72);
 }
 
 // ADAPIVE 1024 (1152)

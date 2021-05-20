@@ -15,6 +15,15 @@ body {
     max-width: 1264px;
 }
 
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 @media screen and (max-width: 1152px) {
     .container {
         max-width: 944px;

@@ -140,7 +140,7 @@
                             <img src="img/common/dash.svg" alt="dash" class="price__item-img">
                             <div class="price__item-name">Dash</div>
                         </div>
-                        <div class="price__item-tariff price__item-tariff--mt26">Price per 1 GH/s</div>
+                        <div class="price__item-tariff price__item-tariff--mt26">Price per 1 MH/s</div>
                         <div class="price__item-cost">1.707 $</div>
                     </div>
                 </div>
@@ -160,18 +160,18 @@
                         <div class="calc__step-title">Choose investment currency</div>
                     </div>
                     <div class="calc__step-currencies">
-                        <div class="calc__step-currency calc__step-currency--orange"><img
+                        <div class="calc__step-currency calc__step-currency--orange" data-currency="43500"><img
                                 class="calc__step-currency--little-mobile" src="img/common/bitcoin.svg" alt="bitcoin">
                         </div>
-                        <div class="calc__step-currency calc__step-currency--violet"><img
+                        <div class="calc__step-currency calc__step-currency--violet" data-currency="3400"><img
                                 class="calc__step-currency--little" src="img/common/ethereum.svg" alt="ethereum">
                         </div>
-                        <div class="calc__step-currency calc__step-currency--blue"><img
+                        <div class="calc__step-currency calc__step-currency--blue" data-currency="300"><img
                                 class="calc__step-currency--little" src="img/common/litecoin.svg" alt="litecoin">
                         </div>
-                        <div class="calc__step-currency calc__step-currency--green"><img
+                        <div class="calc__step-currency calc__step-currency--green" data-currency="310"><img
                                 class="calc__step-currency--little-mobile" src="img/common/dash.svg" alt="dash"></div>
-                        <div class="calc__step-currency calc__step-currency--bgcolor">$</div>
+                        <div class="calc__step-currency calc__step-currency--bgcolor" data-currency="1">$</div>
                     </div>
                 </div>
                 <div class="calc__step-item calc__step-item--order3">
@@ -180,8 +180,8 @@
                         <div class="calc__step-title">Input period of mining</div>
                     </div>
                     <div class="calc__step-content">
-                        <input type="number" class="calc__step-input" placeholder="60">
-                        <div class="calc__step-rule"><span>* </span>min 100 USD</div>
+                        <input type="number" class="calc__step-input" placeholder="60" id="period-mining">
+                        <div class="calc__step-rule" id="min-period-mining"><span>* </span>min 30 days</div>
                     </div>
                 </div>
                 <div class="calc__step-item calc__step-item--order2">
@@ -191,8 +191,8 @@
                             amount</div>
                     </div>
                     <div class="calc__step-content">
-                        <input type="number" class="calc__step-input" placeholder="200">
-                        <div class="calc__step-rule"><span>* </span>min 30 days</div>
+                        <input type="number" class="calc__step-input" placeholder="200" id="invest-amount">
+                        <div class="calc__step-rule" id="min-amount"><span>* </span>min 100 USD</div>
                     </div>
                 </div>
                 <div class="calc__step-item calc__step-item--order4">
@@ -201,27 +201,27 @@
                         <div class="calc__step-title">Choose withdraw currency</div>
                     </div>
                     <div class="calc__step-currencies">
-                        <div class="calc__step-currency calc__step-currency--orange"><img
+                        <div class="calc__step-currency2 calc__step-currency--orange" data-currency="43500"><img
                                 class="calc__step-currency--little-mobile" src="img/common/bitcoin.svg" alt="bitcoin">
                         </div>
-                        <div class="calc__step-currency calc__step-currency--violet"><img
+                        <div class="calc__step-currency2 calc__step-currency--violet" data-currency="3400"><img
                                 class="calc__step-currency--little" src="img/common/ethereum.svg" alt="ethereum">
                         </div>
-                        <div class="calc__step-currency calc__step-currency--blue"><img
+                        <div class="calc__step-currency2 calc__step-currency--blue" data-currency="300"><img
                                 class="calc__step-currency--little" src="img/common/litecoin.svg" alt="litecoin">
                         </div>
-                        <div class="calc__step-currency calc__step-currency--green"><img
+                        <div class="calc__step-currency2 calc__step-currency--green" data-currency="310"><img
                                 class="calc__step-currency--little-mobile" src="img/common/dash.svg" alt="dash"></div>
-                        <div class="calc__step-currency calc__step-currency--bgcolor">$</div>
+                        <div class="calc__step-currency2 calc__step-currency--bgcolor" data-currency="1">$</div>
                     </div>
                 </div>
-                <div class="calc__step-container calc__step-item--order5 calc__step-item--order5">
-                    <div class="calc__step-result">Price for 1 MH/s: <span>0.127$</span></div>
-                    <div class="calc__step-result">Hashrate: <span>106 MH/s</span></div>
+                <div class="calc__step-container calc__step-item--order5">
+                    <div class="calc__step-result">Price for 1 MH/s: <span id="mining-price">1.707 $</span></div>
+                    <div class="calc__step-result">Hashrate: <span id="hashrate">0 MH/s</span></div>
                 </div>
                 <div class="calc__step-container calc__step-item--order6">
-                    <div class="calc__step-result">Profit: <span>0.0006 BTC</span></div>
-                    <div class="calc__step-result">Daily income: <span>1%</span></div>
+                    <div class="calc__step-result">Profit: <span id="profit">0 $</span></div>
+                    <div class="calc__step-result">Daily income: <span id="daily-income">0.4%</span></div>
                     <div class="calc__step-info"><span>*</span> The deposit will return at the end of the investment
                         period.</div>
                 </div>
