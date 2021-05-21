@@ -23,6 +23,7 @@ for (let replenishCur of investCurrencyBtns) {
         checkLimits();
         calcMiningPrice();
         priceFor1();
+        calcProfit();
     })
 }
 
@@ -136,17 +137,12 @@ function calcProfit() {
                     let investAmountVal = +investAmount.value,
                         periodMiningVal = +periodMining.value;
 
-                    if (replenishRate == withdrawRate) {
-                        resultIncome = investAmountVal * 0.004;
-                        resultCalc = resultIncome * periodMiningVal;
-                    } else if (replenishRate > withdrawRate || replenishRate < withdrawRate) {
-                        resultIncome = (investAmountVal * replenishRate / withdrawRate) * 0.004;
-                        resultCalc = resultIncome * periodMiningVal;
-                    }
+                    resultIncome = (investAmountVal * replenishRate / withdrawRate) * 0.004;
+                    resultCalc = resultIncome * periodMiningVal;
 
                     if (withdrawCur.classList.contains('calc__step-currency--orange') || withdrawCur.classList.contains('calc__step-currency--violet') || withdrawCur.classList.contains('calc__step-currency--blue') || withdrawCur.classList.contains('calc__step-currency--green')) {
-                        resultCalc = resultCalc.toFixed(7);
-                        resultIncome = resultIncome.toFixed(7);
+                        resultCalc = resultCalc.toFixed(6);
+                        resultIncome = resultIncome.toFixed(6);
                     }
                     if (withdrawCur.classList.contains('calc__step-currency--orange')) {
                         profit.textContent = `${resultCalc} BTC`;

@@ -27,13 +27,25 @@ if (isMobile.any()) {
 
 // Бургер меню
 
-const iconMenu = document.querySelector('.menu__icon');
-const menuBody = document.querySelector('.menu__body');
+const iconMenu = document.querySelector('.menu__icon'),
+    menuBody = document.querySelector('.menu__body'),
+    userMenuIcon = document.querySelector('.header-cab__menu-icon'),
+    userMenuBody = document.querySelector('.header-cab__menu-body');
+
+
 if (iconMenu) {
-    iconMenu.addEventListener('click', function (e) {
+    iconMenu.addEventListener('click', function () {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
+    });
+}
+
+if (userMenuIcon) {
+    userMenuIcon.addEventListener('click', function () {
+        document.body.classList.toggle('_lock');
+        userMenuIcon.classList.toggle('_active');
+        userMenuBody.classList.toggle('_active');
     });
 }
 

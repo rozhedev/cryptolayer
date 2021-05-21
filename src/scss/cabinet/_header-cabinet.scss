@@ -1,0 +1,183 @@
+.header-cab {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.72);
+    height: 96px;
+    .logo {
+        img {
+            width: 160px;
+        }
+    }
+    &__inner,
+    &__profile,
+    &__user-icon,
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+    &__inner {
+        margin: 10px 0;
+        justify-content: space-between;
+    }
+    &__info {
+        width: 560px;
+        justify-content: space-between;
+    }
+    &__time,
+    &__fullname {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.04em;
+    }
+    &__time {
+        background-color: #fff;
+        width: 248px;
+        height: 40px;
+        color: $bgColor;
+        padding: 12px;
+        text-align: center;
+        border-radius: 16px;
+    }
+    &__profile {
+        width: 264px;
+        justify-content: flex-start;
+    }
+    &__user-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #fff;
+        justify-content: center;
+        margin-right: 16px;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    &__fullname {
+        color: #fff;
+    }
+    &__menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .header-cab {
+        .logo {
+            width: 128px;
+        }
+        &__info {
+            width: 316px;
+        }
+        &__time {
+            background-color: #fff;
+            width: 228px;
+            letter-spacing: 0;
+        }
+        &__profile {
+            display: none;
+        }
+        &__menu {
+            display: block;
+            &-icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 48px;
+            }
+            &-img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &-label {
+                font-size: 9px;
+                text-align: center;
+                letter-spacing: 0.02em;
+                font-family: $titleFont;
+                color: #ffffff;
+            }
+            &-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                top: 96px;
+                left: -100%;
+                width: 100%;
+                height: calc(100% - 76px);
+                background-color: rgba(0, 0, 0, 0.72);
+                padding: 6.4vh 40px;
+                transition: left 0.5s ease 0s;
+                overflow: auto;
+                &._active {
+                    left: 0;
+                }
+            }
+            &-list > li {
+                flex-wrap: wrap;
+                margin-bottom: 48px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+            &-link {
+                display: flex;
+                align-items: center;
+                width: 288px;
+                color: #fff;
+                font-size: 24px;
+                img {
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .header-cab {
+        max-height: 80px;
+        .logo {
+            img {
+                width: 120px;
+            }
+        }
+        &__menu-body {
+            top: 80px;
+        }
+        &__time {
+            display: none;
+        }
+        &__menu {
+            &-list > li {
+                margin-bottom: 40px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+            &-link {
+                width: 232px;
+                font-size: 20px;
+                img {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}
