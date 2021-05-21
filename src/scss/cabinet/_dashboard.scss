@@ -1,0 +1,101 @@
+.dashboard {
+    padding: 200px 0 96px;
+    &__inner {
+        width: 784px;
+        position: relative;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        display: grid;
+        grid-template: 416px 200px / repeat(2, 352px);
+        grid-gap: 80px;
+        position: absolute;
+        left: 400px;
+        top: 0px;
+        color: $bgColor;
+    }
+    &__invest,
+    &__withdraw {
+        width: 352px;
+        height: 416px;
+    }
+    &__invest,
+    &__withdraw,
+    &__refferal {
+        @include whiteContainer;
+
+        padding: 24px 32px;
+
+        &-item {
+            display: flex;
+            margin-top: 32px;
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 29px;
+        }
+        &-num {
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 39px;
+            letter-spacing: 0.08em;
+        }
+        &-img {
+            width: 64px;
+            height: 64px;
+            margin-right: 24px;
+        }
+    }
+    &__refferal {
+        @include whiteContainer;
+        width: 784px;
+        height: 200px;
+        letter-spacing: 0.08em;
+        i {
+            font-size: 56px;
+        }
+        &-item {
+            justify-content: space-between;
+            &--w273px {
+                width: 216px;
+            }
+        }
+        &-title {
+            display: flex;
+            div {
+                margin-left: 24px;
+            }
+            &--column {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 1152px) {
+    .dashboard {
+        padding: 160px 0 64px;
+        &__inner {
+            width: 520px;
+            position: relative;
+        }
+        &-content {
+            grid-template: repeat(2, 416px) 232px / 520px;
+            grid-gap: 64px;
+            left: 400px;
+            top: 0px;
+            color: $bgColor;
+        }
+        &__invest,
+        &__withdraw {
+            width: 520px;
+            height: 416px;
+        }
+    }
+}

@@ -70,6 +70,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
+
 // Плавная прокрутка при клике
 
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');

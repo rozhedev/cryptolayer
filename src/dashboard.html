@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,109 @@
     <title>CRYPTOLAYER</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-    @@include('_header_cabinet.html')
-    <section class="dashboard">
 
+<body>
+    @@include('_header-cabinet.html')
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard__inner">
+                @@include('_nav-cabinet.html')
+
+                <div class="dashboard-content">
+                    <div class="dashboard__invest">
+                        <div class="dashboard__invest-item">
+                            <img src="img/dashboard/deposit-earned.svg" alt="deposit-earned"
+                                class="dashboard__invest-img">
+                            <div class="dashboard__invest-content">
+                                <div class="dashboard__invest-title">Active deposit</div>
+                                <div class="dashboard__invest-num">0,00$</div>
+                            </div>
+                        </div>
+                        <div class="dashboard__invest-item">
+                            <img src="img/statistics/wallet.svg" alt="wallet" class="dashboard__invest-img">
+                            <div class="dashboard__invest-content">
+                                <div class="dashboard__invest-title">Total invested</div>
+                                <div class="dashboard__invest-num">0,00$</div>
+                            </div>
+                        </div>
+                        <div class="dashboard__invest-item">
+                            <img src="img/dashboard/balance-withdrawal.svg" alt="balance-withdrawal"
+                                class="dashboard__invest-img">
+                            <div class="dashboard__invest-content">
+                                <div class="dashboard__invest-title">Account balance</div>
+                                <div class="dashboard__invest-num">0,00$</div>
+                            </div>
+                        </div>
+                        <div class="dashboard__invest-item">
+                            <img src="img/dashboard/deposit-withdraw.svg" alt="deposit-withdraw"
+                                class="dashboard__invest-img">
+                            <div class="dashboard__invest-content">
+                                <div class="dashboard__invest-title">Last deposit</div>
+                                <div class="dashboard__invest-num">0,00$</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard__withdraw">
+                        <div class="dashboard__invest-item">
+                            <img src="img/dashboard/deposit-earned.svg" alt="deposit-earned"
+                                class="dashboard__invest-img">
+                            <div class="dashboard__invest-content">
+                                <div class="dashboard__invest-title">Total earned</div>
+                                <div class="dashboard__invest-num">0,00$</div>
+                            </div>
+                        </div>
+                        <div class="dashboard__invest-item">
+                            <img src="img/statistics/wallet.svg" alt="wallet" class="dashboard__invest-img">
+                            <div class="dashboard__invest-content">
+                                <div class="dashboard__invest-title">Total withdrawal</div>
+                                <div class="dashboard__invest-num">0,00$</div>
+                            </div>
+                        </div>
+                        <div class="dashboard__invest-item">
+                            <img src="img/dashboard/balance-withdrawal.svg" alt="balance-withdrawal"
+                                class="dashboard__invest-img">
+                            <div class="dashboard__invest-content">
+                                <div class="dashboard__invest-title">Last withdrawal</div>
+                                <div class="dashboard__invest-num">0,00$</div>
+                            </div>
+                        </div>
+                        <div class="dashboard__invest-item">
+                            <img src="img/dashboard/deposit-withdraw.svg" alt="deposit-withdraw"
+                                class="dashboard__invest-img">
+                            <div class="dashboard__invest-content">
+                                <div class="dashboard__invest-title">Pending withdraw.</div>
+                                <div class="dashboard__invest-num">0,00$</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard__refferal">
+                        <div class="dashboard__refferal-item dashboard__refferal-b">
+                            <div class="dashboard__refferal-title">
+                                <i class="fas fa-link"></i>
+                                <div>
+                                    <span>Your partner link:</span><br>
+                                    <span class="dashboard__refferal-link">https://cryptolayer.com/?u=John</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-clone" class="dashboard__refferal-icon--little"></i>
+                        </div>
+                        <div class="dashboard__refferal-item dashboard__refferal-item--w273px">
+                            <i class="fas fa-user-plus"></i>
+                            <div class="dashboard__refferal-title dashboard__refferal-title--column">
+                                <span>Your upline:</span>
+                                <span class="dashboard__refferal-link">Steve</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
+    <script src="https://kit.fontawesome.com/f77f4500aa.js" crossorigin="anonymous"></script>
     <script src="js/script.min.js"></script>
 </body>
+
 </html>

@@ -82,11 +82,13 @@
         }
         &__menu {
             display: block;
-            &-icon {
+            &-icon, &-body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
+            }
+            &-icon {
                 height: 48px;
             }
             &-img {
@@ -110,10 +112,6 @@
                 color: #ffffff;
             }
             &-body {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
                 position: fixed;
                 top: 96px;
                 left: -100%;
