@@ -150,7 +150,7 @@
 
 //  MEDIA 1024 (MAX 1152)
 
-@media (max-width: 1152px) {
+@media screen and (max-width: 1152px) {
     .foo {
         margin-top: 80px;
         padding: 32px;

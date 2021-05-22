@@ -33,7 +33,7 @@
     }
 }
 
-@media (max-width: 1152px) {
+@media screen and (max-width: 1152px) {
     .stat {
         &__inner {
             grid-template: repeat(3, 1fr) / repeat(2, 1fr);
@@ -44,7 +44,7 @@
     }
 }
 
-@media (max-width: 926px) {
+@media screen and (max-width: 926px) {
     .stat {
         &__inner {
             grid-template: repeat(3, 1fr) / repeat(2, 1fr);

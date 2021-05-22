@@ -1,7 +1,6 @@
 .dashboard {
     padding: 200px 0 96px;
     &__inner {
-        width: 784px;
         position: relative;
     }
     &-content {
@@ -75,16 +74,15 @@
                 flex-direction: column;
             }
         }
+        &-icon-copy {
+            cursor: pointer;
+        }
     }
 }
 
-@media (max-width: 1152px) {
+@media screen and (max-width: 1152px) {
     .dashboard {
         padding: 160px 0 64px;
-        &__inner {
-            width: 520px;
-            position: relative;
-        }
         &-content {
             grid-template: repeat(2, 416px) 232px / 520px;
             grid-gap: 64px;
@@ -96,6 +94,102 @@
         &__withdraw {
             width: 520px;
             height: 416px;
+            padding: 28px 40px;
+            display: grid;
+            grid-gap: 40px;
+            grid-template: repeat(2, 160px) / repeat(2, 200px);
+            &-item {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 0;
+                width: 216px;
+                text-align: center;
+            }
+            &-img {
+                margin-right: 0px;
+                letter-spacing: 0.04em;
+            }
+            &-content {
+                margin-top: 16px;
+            }
+            &-num {
+                margin-top: 12px;
+            }
+        }
+        &__refferal {
+            width: 520px;
+            height: 232px;
+            i {
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .dashboard-content {
+        left: calc(50% - 260px);
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .dashboard {
+        padding: 136px 0 64px;
+        &-content {
+            grid-template: repeat(2, 732px) 200px / 320px;
+            grid-gap: 48px;
+            left: calc(50% - 160px);
+        }
+        &__invest,
+        &__withdraw {
+            width: 320px;
+            height: 732px;
+            padding: 40px;
+            display: grid;
+            grid-gap: 32px;
+            grid-template: repeat(2, 144px) / 240px;
+            &-item {
+                width: 240px;
+            }
+            &-img {
+                width: 64px;
+                height: 64px;
+            }
+            &-content {
+                margin-top: 12px;
+            }
+            &-num {
+                line-height: 24px;
+                font-size: 24px;
+                margin-top: 8px;
+            }
+        }
+        &__refferal {
+            width: 320px;
+            height: 240px;
+            padding: 24px 12px;
+            i {
+                font-size: 40px;
+            }
+            &-item {
+                &--w273px {
+                    width: 192px;
+                }
+            }
+            &-title {
+                display: flex;
+                div {
+                    margin-left: 8px;
+                    width: 200px;
+                }
+                &--column {
+                    flex-direction: column;
+                }
+            }
+            &-link {
+                font-size: 18px;
+                letter-spacing: 0;
+            }
         }
     }
 }

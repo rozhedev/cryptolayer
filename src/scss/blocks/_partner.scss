@@ -50,7 +50,7 @@
     }
 }
 
-@media (max-width: 1152px) {
+@media screen and (max-width: 1152px) {
     .partner {
         &__img {
             width: 368px;
@@ -71,7 +71,7 @@
     }
 }
 
-@media (max-width: 927px) {
+@media screen and (max-width: 927px) {
     .partner {
         &__img {
             width: 260px;
@@ -94,7 +94,7 @@
     }
 }
 
-@media (max-width: 429px) {
+@media screen and (max-width: 429px) {
     .partner {
         &__inner {
             flex-direction: column;

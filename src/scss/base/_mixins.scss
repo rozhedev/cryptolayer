@@ -16,10 +16,10 @@
         border-color: $bgColor;
         box-shadow: 0 0 4px 2px $bgColor;
     }
-    @media (max-width: 1152px) {
+    @media screen and (max-width: 1152px) {
         font-size: 18px;
     }
-    @media (max-width: 429px) {
+    @media screen and (max-width: 429px) {
         font-size: 16px;
     }
 }
