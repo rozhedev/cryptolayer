@@ -49,28 +49,6 @@ if (userMenuIcon) {
     });
 }
 
-// Липкое меню
-
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', function () {
-    if (this.pageYOffset < 160 || this.pageYOffset > 1700) {
-        header.style.visibility = 'visible';
-        header.style.opacity = '1';
-        if (document.documentElement.clientWidth > 769) {
-            header.style.height = '96px';
-        } else {
-            header.style.height = '80px';
-        }
-    }
-    else {
-        header.style.visibility = 'hidden';
-        header.style.opacity = '0';
-        header.style.height = '0px';
-    }
-});
-
-
 // Плавная прокрутка при клике
 
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
@@ -98,3 +76,24 @@ if (menuLinks.length > 0) {
         }
     }
 }
+
+// Липкое меню
+
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', function () {
+    if (this.pageYOffset < 160 || this.pageYOffset > 1700) {
+        header.style.visibility = 'visible';
+        header.style.opacity = '1';
+        if (document.documentElement.clientWidth > 769) {
+            header.style.height = '96px';
+        } else {
+            header.style.height = '80px';
+        }
+    }
+    else {
+        header.style.visibility = 'hidden';
+        header.style.opacity = '0';
+        header.style.height = '0px';
+    }
+});

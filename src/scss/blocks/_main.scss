@@ -48,7 +48,6 @@
 
 @media screen and (max-width: 927px) {
     .main {
-        margin-top: 152px;
         &__title {
             font-size: 28px;
             letter-spacing: 0.08em;
@@ -67,14 +66,14 @@
 
 @media screen and (max-width: 429px) {
     .main {
-        margin-top: 144px;
+        margin-top: 152px;
         &__title {
             font-size: 24px;
             letter-spacing: 0.06em;
             line-height: 34px;
         }
         &__btn {
-            width: 168px;
+            width: 182px;
             height: 40px;
             padding: 12px 23px;
             margin: 48px auto;

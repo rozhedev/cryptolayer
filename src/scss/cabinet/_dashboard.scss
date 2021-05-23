@@ -3,7 +3,7 @@
     &__inner {
         position: relative;
     }
-    &-content {
+    &__content {
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -83,7 +83,7 @@
 @media screen and (max-width: 1152px) {
     .dashboard {
         padding: 160px 0 64px;
-        &-content {
+        &__content {
             grid-template: repeat(2, 416px) 232px / 520px;
             grid-gap: 64px;
             left: 400px;
@@ -127,15 +127,15 @@
 }
 
 @media screen and (max-width: 927px) {
-    .dashboard-content {
+    .dashboard__content {
         left: calc(50% - 260px);
     }
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 429px) {
     .dashboard {
         padding: 136px 0 64px;
-        &-content {
+        &__content {
             grid-template: repeat(2, 732px) 200px / 320px;
             grid-gap: 48px;
             left: calc(50% - 160px);

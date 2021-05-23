@@ -1,0 +1,214 @@
+.mining-power {
+    padding: 200px 0 96px;
+    &__inner {
+        position: relative;
+    }
+    &__content {
+        position: relative;
+        display: grid;
+        grid-template: 72px repeat(4, 160px) / 784px;
+        grid-gap: 48px;
+        position: absolute;
+        left: 400px;
+        top: 0px;
+        color: $bgColor;
+    }
+    &__info {
+        @include whiteContainer;
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 32px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.08em;
+        &-num {
+            font-weight: 600;
+        }
+    }
+    &__item {
+        background-color: #fff;
+        height: 80px;
+        width: 784px;
+        border-radius: 16px 16px 0 0;
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 78px;
+            padding: 20px 24px;
+        }
+        &-curblock {
+            width: 216px;
+            display: flex;
+            align-items: center;
+        }
+        &-currency {
+            font-family: $titleFont;
+            font-size: 24px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            margin-left: 16px;
+        }
+        &-range {
+            width: 240px;
+            height: 24px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            background: transparent;
+            &::-moz-focus-outer {
+                border: none;
+            }
+            &::focus {
+                outline: none;
+            }
+            &::-webkit-slider-runnable-track,
+            &:focus::-ms-fill-lower,
+            &:focus::-ms-fill-upper {
+                background-color: #fff;
+            }
+            &::-webkit-slider-runnable-track {
+                cursor: pointer;
+                height: 8px;
+                transition: all 0.2s ease;
+                border: 2px solid $bgColor;
+                border-radius: 4px;
+            }
+            &::-webkit-slider-thumb {
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+                border-radius: 12px;
+                box-sizing: border-box;
+                cursor: pointer;
+                height: 24px;
+                width: 24px;
+                -webkit-appearance: none;
+                margin-top: -10px;
+            }
+            &--orange::-webkit-slider-thumb {
+                background-color: $orange;
+            }
+            &--violet::-webkit-slider-thumb {
+                background-color: $violet;
+            }
+            &--blue::-webkit-slider-thumb {
+                background-color: $blue;
+            }
+            &--green::-webkit-slider-thumb {
+                background-color: $green;
+            }
+            &::-moz-range-thumb {
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+                background: #607d8b;
+                border: 2px solid #eceff1;
+                border-radius: 12px;
+                box-sizing: border-box;
+                cursor: default;
+                height: 24px;
+                width: 24px;
+            }
+
+            &::-ms-track {
+                cursor: default;
+                height: 8px;
+                transition: all 0.2s ease;
+                width: 100%;
+                background: transparent;
+                border-color: transparent;
+                border-width: 12px 0;
+                color: transparent;
+            }
+            &::-ms-fill-lower {
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+                background: #dde3e6;
+                border: 2px solid #cfd8dc;
+                border-radius: 10px;
+            }
+            &::-ms-fill-upper {
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+                background: #eceff1;
+                border: 2px solid #cfd8dc;
+                border-radius: 10px;
+            }
+            &::-ms-thumb {
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+                background: #607d8b;
+                border: 2px solid #eceff1;
+                border-radius: 12px;
+                box-sizing: border-box;
+                cursor: default;
+                height: 24px;
+                width: 24px;
+                margin-top: 2px;
+            }
+            &:disabled::-webkit-slider-thumb,
+            &:disabled::-moz-range-thumb,
+            &:disabled::-ms-thumb,
+            &:disabled::-webkit-slider-runnable-track,
+            &:disabled::-ms-fill-lower,
+            &:disabled::-ms-fill-upper {
+                cursor: not-allowed;
+            }
+        }
+        &-label {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.04em;
+        }
+        &-dropdown {
+            width: 24px;
+            cursor: pointer;
+            // &--active {
+            //     transform: rotate(180deg);
+            //     transition: .7s all;
+            // }
+        }
+        // &--active {
+        //     .mining-power__hide {
+        //         display: flex;
+        //     }
+        // }
+    }
+    &__hide {
+        width: 784px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 0 0 16px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 16px 32px;
+        &-data {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            &--mt16px {
+                margin-top: 8px;
+            }
+        }
+        &-btn {
+            @include btnStyle;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            &:hover {
+                color: $bgColor;
+            }
+            &--violet {
+                background-color: $violet;
+            }
+            &--blue {
+                background-color: $blue;
+            }
+            &--green {
+                background-color: $green;
+            }
+        }
+    }
+}
