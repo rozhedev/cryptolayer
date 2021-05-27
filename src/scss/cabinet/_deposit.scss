@@ -1,0 +1,134 @@
+.deposit,
+.withdraw {
+    padding: 200px 0 96px;
+    &__inner {
+        position: relative;
+    }
+    &__step {
+        margin: 0 auto;
+        width: 772px;
+        height: 744px;
+        position: absolute;
+        left: 400px;
+        top: 0px;
+        padding: 24px 88px;
+        grid-template: repeat(3, 1fr) / 1fr;
+        gap: 32px 0px;
+        &-content {
+            margin-left: 0;
+        }
+    }
+    &__btn {
+        @include btnStyle;
+        margin: 0 auto;
+        width: 200px;
+        height: 56px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        letter-spacing: 0.08em;
+        padding: 20px 36px;
+    }
+}
+
+// ADAPIVE 1024 (1152)
+
+@media screen and (max-width: 1152px) {
+    .deposit,
+    .withdraw {
+        padding: 176px 0 96px;
+        &__step {
+            margin: 0 auto;
+            width: 560px;
+            height: 680px;
+            padding: 24px 28px;
+            gap: 24px 0;
+            grid-template: repeat(3, 1fr) / 1fr;
+            &-currencies {
+                margin: 32px 0 0 0;
+            }
+            &-num {
+                font-size: 60px;
+                line-height: 73px;
+            }
+            &-title {
+                font-size: 28px;
+                line-height: 34px;
+                letter-spacing: 0.02em;
+            }
+            &-currency {
+                width: 56px;
+                height: 56px;
+                &--little {
+                    height: 30px;
+                }
+                &--little-mobile {
+                    height: 28px;
+                }
+            }
+            &-input {
+                width: 240px;
+                height: 48px;
+            }
+        }
+        &__btn {
+            width: 168px;
+            height: 48px;
+            padding: 16px 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 1152px) {
+    .deposit__step, .withdraw__step {
+        left: calc(50% - 88px);
+    }
+}
+
+// ADAPTIVE 768 (927)
+
+@media screen and (max-width: 927px) {
+    .deposit,
+    .withdraw {
+        &__step {
+            left: calc(50% - 264px);
+            width: 560px;
+            height: 680px;
+            padding: 24px 32px;
+        }
+    }
+}
+
+// ADAPTIVE FOR MOBILE (429)
+
+@media screen and (max-width: 429px) {
+    .deposit,
+    .withdraw {
+        padding: 136px 0 56px;
+        &__step {
+            width: 340px;
+            height: 648px;
+            gap: 24px 0;
+            left: calc(50% - 170px);
+            &-currency {
+                &--little-mobile {
+                    width: 24px;
+                }
+                &--little {
+                    width: 16px;
+                }
+            }
+            &-content {
+                margin: 24px auto 0;
+            }
+        }
+        &__btn {
+            width: 152px;
+            height: 48px;
+        }
+    }
+}
+
+.withdraw__step-input--w100 {
+    width: 100% !important;
+}

@@ -126,6 +126,12 @@
     }
 }
 
+@media screen and (max-width: 1152px) {
+    .dashboard__content {
+        left: calc(50% - 88px);
+    }
+}
+
 @media screen and (max-width: 927px) {
     .dashboard__content {
         left: calc(50% - 260px);

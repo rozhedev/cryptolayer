@@ -6,6 +6,6 @@ window.addEventListener('DOMContentLoaded', function () {
     new WOW().init();
 });
 
-@@include('_faq.js')
 @@include('_validate.js')
 @@include('_mining-power.js')
+@@include('_faq.js')

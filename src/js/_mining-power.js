@@ -1,7 +1,7 @@
 const miningDataItems = document.querySelectorAll('.mining-power__item'),
     dropdownItems = document.querySelectorAll('.mining-power__item-dropdown');
 
-console.log(dropdownItens);
+console.log(dropdownItems);
 dropdownItems.forEach((item) => {
     item.addEventListener('click', function () {
         const parent = item.parentNode;
