@@ -14,6 +14,7 @@
         left: 400px;
         top: 0px;
         color: $bgColor;
+        padding-bottom: 40px;
     }
     &__invest,
     &__withdraw {
@@ -56,26 +57,33 @@
         width: 784px;
         height: 200px;
         letter-spacing: 0.08em;
-        i {
-            font-size: 56px;
-        }
         &-item {
+            display: flex;
             justify-content: space-between;
-            &--w273px {
-                width: 216px;
+            &--flex-start {
+                justify-content: flex-start;
             }
+        }
+        &-content {
+            display: flex;
+        }
+        &-descr {
+            margin-left: 32px;
         }
         &-title {
-            display: flex;
-            div {
-                margin-left: 24px;
-            }
-            &--column {
-                flex-direction: column;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.08em;
+            &:nth-child(2n) {
+                font-weight: 800;
             }
         }
-        &-icon-copy {
-            cursor: pointer;
+        &-icon {
+            font-size: 52px;
+            &:last-child {
+                cursor: pointer;
+                font-size: 40px;
+            }
         }
     }
 }
@@ -87,8 +95,8 @@
             grid-template: repeat(2, 416px) 232px / 520px;
             grid-gap: 64px;
             left: 400px;
-            top: 0px;
             color: $bgColor;
+            left: calc(50% - 88px);
         }
         &__invest,
         &__withdraw {
@@ -119,16 +127,24 @@
         &__refferal {
             width: 520px;
             height: 232px;
-            i {
+            &-descr {
+                margin-left: 16px;
+            }
+            &-title:nth-child(2n) {
+                font-weight: 600;
+                letter-spacing: 0.02em;
+            }
+            &-upline {
+                font-weight: 800 !important;
+                letter-spacing: 0.04em !important;
+            }
+            &-icon {
                 font-size: 48px;
+                &:last-child {
+                    font-size: 32px;
+                }
             }
         }
-    }
-}
-
-@media screen and (max-width: 1152px) {
-    .dashboard__content {
-        left: calc(50% - 88px);
     }
 }
 
@@ -142,7 +158,7 @@
     .dashboard {
         padding: 136px 0 64px;
         &__content {
-            grid-template: repeat(2, 732px) 200px / 320px;
+            grid-template: repeat(2, 732px) 240px / 320px;
             grid-gap: 48px;
             left: calc(50% - 160px);
         }
@@ -172,29 +188,31 @@
         }
         &__refferal {
             width: 320px;
-            height: 240px;
-            padding: 24px 12px;
-            i {
-                font-size: 40px;
-            }
-            &-item {
-                &--w273px {
-                    width: 192px;
-                }
+            height: 200px;
+            padding: 16px 8px;
+            &-descr {
+                margin-left: 8px;
             }
             &-title {
-                display: flex;
-                div {
-                    margin-left: 8px;
-                    width: 200px;
-                }
-                &--column {
-                    flex-direction: column;
+                font-size: 22px;
+                line-height: 27px;
+                letter-spacing: 0.02em;
+                &:nth-child(2n) {
+                    font-size: 18px;
+                    line-height: 22px;
+                    letter-spacing: 0;
                 }
             }
-            &-link {
-                font-size: 18px;
-                letter-spacing: 0;
+            &-upline {
+                line-height: 27px !important;
+                letter-spacing: 0.08em !important;
+                font-size: 22px !important;
+            }
+            &-icon {
+                font-size: 40px;
+                &:last-child {
+                    font-size: 28px;
+                }
             }
         }
     }

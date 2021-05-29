@@ -1,0 +1,180 @@
+.partners-page {
+    padding: 200px 0 96px;
+    &__inner {
+        position: relative;
+    }
+    &__content {
+        margin: 0 auto;
+        width: 784px;
+        position: absolute;
+        left: 400px;
+        top: 0px;
+        display: grid;
+        grid-template: 232px, 96px, 1fr / 1fr;
+        gap: 40px 0px;
+        color: $bgColor;
+        padding-bottom: 40px;
+    }
+    &__stat,
+    &__link {
+        @include whiteContainer;
+    }
+    &__stat {
+        height: 232px;
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+        column-gap: 20px;
+        padding: 20px;
+        &-item {
+            display: flex;
+            align-items: center;
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+        }
+        &-icon {
+            height: 40px;
+        }
+        i {
+            font-size: 36px;
+        }
+        &-title {
+            margin: 0 8px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &-num {
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.04em;
+        }
+    }
+    &__link {
+        height: 88px;
+        padding: 16px 32px;
+        letter-spacing: 0.08em;
+        &-text {
+            font-weight: 600 !important;
+        }
+    }
+    &__table {
+        min-height: 376px;
+        border-radius: 16px;
+        background-image: linear-gradient(to top, #fff 86%, $green 14%);
+        padding: 16px 20px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        &-header {
+            width: 784px;
+            height: 56px;
+            background-color: $green;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 27px;
+            letter-spacing: 0.08em;
+            color: #fff;
+        }
+        &-border {
+            height: 0.1px;
+            outline: 1px solid $bgColor;
+        }
+    }
+    &__advice {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1152px) {
+    .partners-page {
+        padding: 160px 0 64px;
+        &__content {
+            width: 520px;
+            left: calc(50% - 160px);
+            grid-template: 424px, 128px, 1fr / 616px;
+            justify-items: end;
+        }
+        &__stat {
+            width: 520px;
+            height: 424px;
+            grid-template: repeat(6, 1fr) / 1fr;
+            column-gap: 24px;
+            padding: 32px 56px;
+        }
+        &__link {
+            width: 520px;
+            height: 128px;
+            padding: 16px 24px;
+        }
+        &__table {
+            width: 640px;
+        }
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .partners-page__content {
+        justify-items: center;
+        left: calc(50% - 320px);
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .partners-page {
+        padding: 136px 0 64px;
+        &__content {
+            left: calc(50% - 160px);
+            width: 320px;
+            grid-template: 800px, 120px, 160px / 1fr;
+        }
+        &__stat {
+            width: 320px;
+            height: 800px;
+            gap: 24px 0;
+            padding: 24px 32px;
+            &-item, &-content {
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &-title {
+                margin-top: 12px;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: 24px;
+            }
+            &-num {
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.04em;
+            }
+        }
+        &__link {
+            width: 320px;
+            height: 120px;
+            padding: 24px 8px;
+        }
+        &__table {
+            display: none;
+        }
+        &__advice {
+            @include whiteContainer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 320px;
+            height: 160px;
+            padding: 20px 24px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+    }
+}

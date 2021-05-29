@@ -6,12 +6,12 @@
     }
     &__step {
         margin: 0 auto;
-        width: 772px;
+        width: 784px;
         height: 744px;
         position: absolute;
         left: 400px;
         top: 0px;
-        padding: 24px 88px;
+        padding: 24px 96px;
         grid-template: repeat(3, 1fr) / 1fr;
         gap: 32px 0px;
         &-content {
