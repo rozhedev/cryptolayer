@@ -36,7 +36,7 @@
 @media screen and (max-width: 1152px) {
     .deposit,
     .withdraw {
-        padding: 176px 0 96px;
+        padding: 160px 0 64px;
         &__step {
             margin: 0 auto;
             width: 560px;
@@ -44,6 +44,7 @@
             padding: 24px 28px;
             gap: 24px 0;
             grid-template: repeat(3, 1fr) / 1fr;
+            left: calc(50% - 88px);
             &-currencies {
                 margin: 32px 0 0 0;
             }
@@ -76,12 +77,6 @@
             height: 48px;
             padding: 16px 28px;
         }
-    }
-}
-
-@media screen and (max-width: 1152px) {
-    .deposit__step, .withdraw__step {
-        left: calc(50% - 88px);
     }
 }
 

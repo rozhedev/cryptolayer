@@ -4,9 +4,6 @@
         position: relative;
     }
     &__content {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
         display: grid;
         grid-template: 416px 200px / repeat(2, 352px);
         grid-gap: 80px;
@@ -94,7 +91,6 @@
         &__content {
             grid-template: repeat(2, 416px) 232px / 520px;
             grid-gap: 64px;
-            left: 400px;
             color: $bgColor;
             left: calc(50% - 88px);
         }

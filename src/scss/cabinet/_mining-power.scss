@@ -4,7 +4,6 @@
         position: relative;
     }
     &__content {
-        position: relative;
         display: grid;
         grid-template: 72px repeat(4, 160px) / 784px;
         grid-gap: 48px;

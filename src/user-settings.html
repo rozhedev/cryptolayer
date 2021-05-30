@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    @@include('_header-cabinet.html')
+    <section class="user-settings">
+        <div class="container">
+            <div class="user-settings__inner">
+                @@include('_nav-cabinet.html')
+                <div class="user-settings__content">
+
+                    <div class="user-settings__pass">
+                        <h3 class="user-settings__pass-title">Change password</h3>
+                        <div class="user-settings__pass-content">
+                            <form action="" class="user-settings__pass-form">
+                                <div class="user-settings__item">
+                                    <label for="new-pass" class="user-settings__label">New password:</label>
+                                    <input type="password" class="user-settings__inp" id="new-pass">
+                                </div>
+                                <div class="user-settings__item">
+                                    <label for="confirm-new-pass" class="user-settings__label">Confirm password:</label>
+                                    <input type="password" class="user-settings__inp" id="confirm-new-pass">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="user-settings__payment">
+                        <h3 class="user-settings__pass-title">Payment methods</h3>
+                        <div class="user-settings__payment-content">
+                            <form action="" class="user-settings__payment-form">
+                                <div class="user-settings__item">
+                                    <label for="new-pass" class="user-settings__label">Bitcoin wallet:</label>
+                                    <input type="text" class="user-settings__inp" id="bitcoin-wallet">
+                                </div>
+                                <div class="user-settings__item">
+                                    <label for="new-pass" class="user-settings__label">Ethereum wallet:</label>
+                                    <input type="text" class="user-settings__inp" id="ethereum-wallet">
+                                </div>
+                                <div class="user-settings__item">
+                                    <label for="new-pass" class="user-settings__label">Litecoin wallet:</label>
+                                    <input type="text" class="user-settings__inp" id="litecoin-wallet">
+                                </div>
+                                <div class="user-settings__item">
+                                    <label for="confirm-new-pass" class="user-settings__label">Dash wallet:</label>
+                                    <input type="text" class="user-settings__inp" id="dash-wallet">
+                                </div>
+                                <div class="user-settings__item">
+                                    <label for="new-pass" class="user-settings__label">Credit card:</label>
+                                    <input type="text" class="user-settings__inp user-settings__inp--big" id="credit-card">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button class="user-settings__btn">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/f77f4500aa.js" crossorigin="anonymous"></script>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>
