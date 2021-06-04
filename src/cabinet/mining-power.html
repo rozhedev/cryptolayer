@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRYPTOLAYER</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
 </head>
 
 <body>
@@ -26,8 +26,8 @@
                         </div>
                     </div>
 
-                    <div class="mining-power__item mining-power__item--active">
-                        <div class="mining-power__item-content">
+                    <div class="mining-power__item">
+                        <div class="mining-power__item-content mining-power__item-content--little">
                             <div class="mining-power__item-curblock">
                                 <svg width="31" height="43" viewBox="0 0 31 43" fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -38,13 +38,13 @@
                                 </svg>
                                 <div class="mining-power__item-currency">Bitcoin</div>
                             </div>
+                            <!-- <div class="mining-power__item-used">0%</div> -->
                             <input type="range" class="mining-power__item-range mining-power__item-range--orange"
-                                id="bitcoin-range" min="0" max="1" step="0.00000001">
-                            <label for="bitcoin-range" class="mining-power__item-label">0.00000000 BTC</label>
-                            <div class="mining-power__item-dropdown">
-                                <img src="img/common/caret-down-solid.svg" alt="dropdown">
-                            </div>
+                                id="bitcoin-range" min="0" max="0.5" step="0.00000001">
+                            <label for="bitcoin-range" class="mining-power__item-label"><span class="mining-power__item-span" data-range="bitcoin-range"> 0.00000000</span> BTC</label>
                         </div>
+                        <img src="../img/common/caret-down-solid.svg" alt="dropdown"
+                            class="mining-power__item-dropdown">
                         <div class="mining-power__hide">
                             <div class="mining-power__hide-content">
                                 <div class="mining-power__hide-data">Per day: 0.00000000 BTC</div>
@@ -77,12 +77,12 @@
                                 <div class="mining-power__item-currency">Ethereum</div>
                             </div>
                             <input type="range" class="mining-power__item-range mining-power__item-range--violet"
-                                id="ethereum-range" min="0" max="10" step="0.00000001">
-                            <label for="bitcoin-range" class="mining-power__item-label">0.00000000 ETH</label>
-                            <div class="mining-power__item-dropdown">
-                                <img src="img/common/caret-down-solid.svg" alt="dropdown">
-                            </div>
+                                id="ethereum-range" min="0" max="5" step="0.00000001">
+                            <label for="ethereum-range" class="mining-power__item-label"><span class="mining-power__item-span" data-range="ethereum-range"> 0.00000000</span> ETH</label>
                         </div>
+                        <img src="../img/common/caret-down-solid.svg" alt="dropdown"
+                            class="mining-power__item-dropdown">
+
                         <div class="mining-power__hide">
                             <div class="mining-power__hide-content">
                                 <div class="mining-power__hide-data">Per day: 0.00000000 ETH</div>
@@ -113,12 +113,12 @@
                                 <div class="mining-power__item-currency">Litecoin</div>
                             </div>
                             <input type="range" class="mining-power__item-range mining-power__item-range--blue"
-                                id="litecoin-range" min="0" max="50" step="0.00000001">
-                            <label for="bitcoin-range" class="mining-power__item-label">0.00000000 LTC</label>
-                            <div class="mining-power__item-dropdown">
-                                <img src="img/common/caret-down-solid.svg" alt="dropdown">
-                            </div>
+                                id="litecoin-range" min="0" max="25" step="0.00000001">
+                            <label for="litecoin-range" class="mining-power__item-label"><span class="mining-power__item-span" data-range="litecoin-range"> 0.00000000</span> LTC</label>
                         </div>
+                        <img src="../img/common/caret-down-solid.svg" alt="dropdown"
+                            class="mining-power__item-dropdown">
+
                         <div class="mining-power__hide">
                             <div class="mining-power__hide-content">
                                 <div class="mining-power__hide-data">Per day: 0.00000000 LTC</div>
@@ -131,7 +131,8 @@
                                 <div class="mining-power__hide-data mining-power__hide-data--mt16px">Per 6 month:
                                     0.00000000 LTC</div>
                             </div>
-                            <button class="mining-power__hide-btn mining-power__hide-btn--blue">Exchange to USD</button>
+                            <button class="mining-power__hide-btn mining-power__hide-btn--blue">Exchange to
+                                USD</button>
                         </div>
                     </div>
 
@@ -151,12 +152,12 @@
                                 <div class="mining-power__item-currency">Dash</div>
                             </div>
                             <input type="range" class="mining-power__item-range mining-power__item-range--green"
-                                id="dash-range" min="0" max="50" step="0.00000001">
-                            <label for="bitcoin-range" class="mining-power__item-label">0.00000000 DASH</label>
-                            <div class="mining-power__item-dropdown">
-                                <img src="img/common/caret-down-solid.svg" alt="dropdown">
-                            </div>
+                                id="dash-range" min="0" max="25" step="0.00000001">
+                            <label for="dash-range" class="mining-power__item-label"><span class="mining-power__item-span" data-range="dash-range"> 0.00000000</span> DASH</label>
                         </div>
+                        <img src="../img/common/caret-down-solid.svg" alt="dropdown"
+                            class="mining-power__item-dropdown">
+
                         <div class="mining-power__hide">
                             <div class="mining-power__hide-content">
                                 <div class="mining-power__hide-data">Per day: 0.00000000 DASH</div>
@@ -178,7 +179,8 @@
         </div>
     </section>
     <script src="https://kit.fontawesome.com/f77f4500aa.js" crossorigin="anonymous"></script>
-    <script src="js/script.min.js"></script>
+    <script src="../js/user-cabinet.min.js"></script>
+    <script src="../js/mining-power.min.js"></script>
 </body>
 
 </html>

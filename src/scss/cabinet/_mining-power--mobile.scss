@@ -17,10 +17,6 @@
         &__item {
             height: 120px;
             width: 528px;
-            &-content {
-                height: 120px;
-                padding: 20px 24px;
-            }
             &-label,
             &-dropdown {
                 margin-top: 12px;
@@ -63,12 +59,12 @@
         &__item {
             width: 340px;
             height: 152px;
-            &-content {
-                padding: 24px;
-                svg {
-                    height: 40px;
-                }
+            padding: 24px;
+            svg {
+                height: 40px;
             }
+            // &-content {
+            // }
             &-curblock {
                 width: 216px;
                 display: flex;

@@ -5,7 +5,7 @@
     }
     &__content {
         display: grid;
-        grid-template: 72px repeat(4, 160px) / 784px;
+        grid-template: 72px auto / 784px;
         grid-gap: 48px;
         position: absolute;
         left: 400px;
@@ -28,16 +28,22 @@
     }
     &__item {
         background-color: #fff;
-        height: 80px;
         width: 784px;
         border-radius: 16px 16px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 76px;
         &-content {
+            width: 736px;
+            padding: 22px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            height: 78px;
-            padding: 20px 24px;
+            &--little {
+                padding: 16px 24px;
+            }
         }
         &-curblock {
             width: 216px;
@@ -156,27 +162,32 @@
             font-size: 20px;
             line-height: 24px;
             letter-spacing: 0.04em;
+            text-align: center;
+            width: 216px;
         }
         &-dropdown {
+            display: block;
             width: 24px;
             cursor: pointer;
+            transition: .7s all;
+            margin-right: 24px;
             &--active {
                 transform: rotate(180deg);
-                transition: .7s all;
             }
         }
         &--active {
+            margin-bottom: 76px;
             .mining-power__hide {
                 display: flex;
+                transition: .7s all;
             }
         }
     }
     &__hide {
         width: 784px;
-        height: 80px;
+        height: 76px;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 0 0 16px 16px;
-        // display: flex;
         display: none;
         justify-content: space-between;
         align-items: center;
@@ -185,6 +196,7 @@
         &-data {
             font-weight: 500;
             font-size: 16px;
+            letter-spacing: -0.02em;
             line-height: 20px;
             &--mt16px {
                 margin-top: 8px;
