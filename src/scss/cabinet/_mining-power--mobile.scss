@@ -2,7 +2,7 @@
     .mining-power {
         padding: 176px 0 96px;
         &__content {
-            grid-template: 192px repeat(4, 272px) / 528px;
+            grid-template: 192px repeat(4, auto) / 528px;
             grid-gap: 40px;
             left: calc(50% - 88px);
         }
@@ -15,17 +15,27 @@
             margin: 0 auto;
         }
         &__item {
-            height: 120px;
+            height: 112px;
             width: 528px;
-            &-label,
-            &-dropdown {
+            position: relative;
+            &-label {
                 margin-top: 12px;
+            }
+            &-dropdown {
+                position: absolute;
+                top: 64px;
+                left: 50%;
+                margin: 0;
+                padding: 0;
+            }
+            &--active {
+                margin-bottom: 152px;
             }
         }
         &__hide {
             width: 528px;
             height: 152px;
-            padding: 12px;
+            padding: 12px 0;
             justify-content: space-around;
             &-data {
                 font-size: 15px;
@@ -45,7 +55,7 @@
     .mining-power {
         padding: 136px 0 56px;
         &__content {
-            grid-template: 160px repeat(4, 360px) / 340px;
+            grid-template: 160px repeat(4, auto) / 340px;
             grid-gap: 48px;
             left: calc(50% - 170px);
         }
@@ -58,13 +68,10 @@
         }
         &__item {
             width: 340px;
-            height: 152px;
-            padding: 24px;
+            height: 148px;
             svg {
                 height: 40px;
             }
-            // &-content {
-            // }
             &-curblock {
                 width: 216px;
                 display: flex;
@@ -80,9 +87,15 @@
             &-range {
                 margin-top: 12px;
             }
+            &-dropdown {
+                top: 80px;
+                left: 82%;
+            }
+            &--active {
+                margin-bottom: 200px;
+            }
         }
         &__hide {
-            margin-top: 32px;
             width: 340px;
             height: 208px;
             text-align: center;

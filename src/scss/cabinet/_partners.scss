@@ -70,8 +70,6 @@
         line-height: 20px;
         text-align: center;
         &-header {
-            width: 784px;
-            height: 56px;
             background-color: $green;
             font-weight: 600;
             font-size: 22px;
@@ -80,7 +78,7 @@
             color: #fff;
         }
         &-border {
-            height: 0.1px;
+            height: 0px;
             outline: 1px solid $bgColor;
         }
     }

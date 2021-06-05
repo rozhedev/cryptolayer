@@ -25,13 +25,32 @@ window.addEventListener('DOMContentLoaded', function () {
     })
 
     const rangeInputs = document.querySelectorAll('.mining-power__item-range'),
-        rangeSpans = document.querySelectorAll('.mining-power__item-span');
+        rangeSpans = document.querySelectorAll('.mining-power__item-span'),
+        usedSpans = document.querySelectorAll('.mining-power__item-used');
 
     rangeInputs.forEach((rangeItem) => {
         rangeItem.addEventListener('input', function () {
             rangeSpans.forEach((spanItem) => {
                 if (rangeItem.getAttribute('id') == spanItem.getAttribute('data-range')) {
                     spanItem.textContent = rangeItem.value;
+                }
+            })
+            usedSpans.forEach((usedItem) => {
+                if (rangeItem.id == 'bitcoin-range' && usedItem.getAttribute('data-percent-range') == 'bitcoin-range') {
+                    usedItem.textContent = `${(+rangeItem.value * 200).toFixed()}%`;
+                    return false;
+                }
+                if (rangeItem.id == 'ethereum-range' && usedItem.getAttribute('data-percent-range') == 'ethereum-range') {
+                    usedItem.textContent = `${(+rangeItem.value * 20).toFixed()}%`;
+                    return false;
+                }
+                if (rangeItem.id == 'litecoin-range' && usedItem.getAttribute('data-percent-range') == 'litecoin-range') {
+                    usedItem.textContent = `${(+rangeItem.value * 4).toFixed()}%`;
+                    return false;
+                }
+                if (rangeItem.id == 'dash-range' && usedItem.getAttribute('data-percent-range') == 'dash-range') {
+                    usedItem.textContent = `${(+rangeItem.value * 4).toFixed()}%`;
+                    return false;
                 }
             })
         })

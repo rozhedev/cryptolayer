@@ -22,7 +22,7 @@
                                 MH/s</span></div>
                         <div class="mining-power__info-stock">In stock: <span class="mining-power__info-num">0 %</span>
                         </div>
-                        <div class="mining-power__item-used">Used: <span class="mining-power__info-num">100 %</span>
+                        <div class="mining-power__info-used">Used: <span class="mining-power__info-num">0 %</span>
                         </div>
                     </div>
 
@@ -38,23 +38,25 @@
                                 </svg>
                                 <div class="mining-power__item-currency">Bitcoin</div>
                             </div>
-                            <!-- <div class="mining-power__item-used">0%</div> -->
+                            <div class="mining-power__item-used" data-percent-range="bitcoin-range">0%</div>
                             <input type="range" class="mining-power__item-range mining-power__item-range--orange"
                                 id="bitcoin-range" min="0" max="0.5" step="0.00000001">
-                            <label for="bitcoin-range" class="mining-power__item-label"><span class="mining-power__item-span" data-range="bitcoin-range"> 0.00000000</span> BTC</label>
+                            <label for="bitcoin-range" class="mining-power__item-label"><span
+                                    class="mining-power__item-span" data-range="bitcoin-range"> 0.00000000</span>
+                                BTC</label>
                         </div>
                         <img src="../img/common/caret-down-solid.svg" alt="dropdown"
                             class="mining-power__item-dropdown">
                         <div class="mining-power__hide">
                             <div class="mining-power__hide-content">
-                                <div class="mining-power__hide-data">Per day: 0.00000000 BTC</div>
-                                <div class="mining-power__hide-data mining-power__hide-data--mt16px">Per month:
-                                    0.00000000 BTC</div>
+                                <div class="mining-power__hide-data" id="bitcoin-per-day">Per day: 0.00000000 BTC</div>
+                                <div class="mining-power__hide-data mining-power__hide-data--mt16px"
+                                    id="bitcoin-per-month">Per month: 0.00000000 BTC</div>
                             </div>
                             <div class="mining-power__hide-content">
-                                <div class="mining-power__hide-data">Per 3 month:
+                                <div class="mining-power__hide-data" id="bitcoin-per-3month">Per 3 month:
                                     0.00000000 BTC</div>
-                                <div class="mining-power__hide-data mining-power__hide-data--mt16px">Per 6 month:
+                                <div class="mining-power__hide-data mining-power__hide-data--mt16px" id="bitcoin-per-6month">Per 6 month:
                                     0.00000000 BTC</div>
                             </div>
                             <button class="mining-power__hide-btn">Exchange to USD</button>
@@ -76,23 +78,28 @@
                                 </svg>
                                 <div class="mining-power__item-currency">Ethereum</div>
                             </div>
+                            <div class="mining-power__item-used" data-percent-range="ethereum-range">0%</div>
                             <input type="range" class="mining-power__item-range mining-power__item-range--violet"
                                 id="ethereum-range" min="0" max="5" step="0.00000001">
-                            <label for="ethereum-range" class="mining-power__item-label"><span class="mining-power__item-span" data-range="ethereum-range"> 0.00000000</span> ETH</label>
+                            <label for="ethereum-range" class="mining-power__item-label"><span
+                                    class="mining-power__item-span" data-range="ethereum-range"> 0.00000000</span>
+                                ETH</label>
                         </div>
                         <img src="../img/common/caret-down-solid.svg" alt="dropdown"
                             class="mining-power__item-dropdown">
 
                         <div class="mining-power__hide">
                             <div class="mining-power__hide-content">
-                                <div class="mining-power__hide-data">Per day: 0.00000000 ETH</div>
-                                <div class="mining-power__hide-data mining-power__hide-data--mt16px">Per month:
+                                <div class="mining-power__hide-data" id="ethereum-per-day">Per day: 0.00000000 ETH</div>
+                                <div class="mining-power__hide-data mining-power__hide-data--mt16px"
+                                    id="ethereum-per-month">Per month:
                                     0.00000000 ETH</div>
                             </div>
                             <div class="mining-power__hide-content">
-                                <div class="mining-power__hide-data">Per 3 month:
+                                <div class="mining-power__hide-data" id="ethereum-per-3month">Per 3 month:
                                     0.00000000 ETH</div>
-                                <div class="mining-power__hide-data mining-power__hide-data--mt16px">Per 6 month:
+                                <div class="mining-power__hide-data mining-power__hide-data--mt16px"
+                                    id="ethereum-per-6month">Per 6 month:
                                     0.00000000 ETH</div>
                             </div>
                             <button class="mining-power__hide-btn mining-power__hide-btn--violet">Exchange to
@@ -112,23 +119,28 @@
                                 </svg>
                                 <div class="mining-power__item-currency">Litecoin</div>
                             </div>
+                            <div class="mining-power__item-used" data-percent-range="litecoin-range">0%</div>
                             <input type="range" class="mining-power__item-range mining-power__item-range--blue"
                                 id="litecoin-range" min="0" max="25" step="0.00000001">
-                            <label for="litecoin-range" class="mining-power__item-label"><span class="mining-power__item-span" data-range="litecoin-range"> 0.00000000</span> LTC</label>
+                            <label for="litecoin-range" class="mining-power__item-label"><span
+                                    class="mining-power__item-span" data-range="litecoin-range"> 0.00000000</span>
+                                LTC</label>
                         </div>
                         <img src="../img/common/caret-down-solid.svg" alt="dropdown"
                             class="mining-power__item-dropdown">
 
                         <div class="mining-power__hide">
                             <div class="mining-power__hide-content">
-                                <div class="mining-power__hide-data">Per day: 0.00000000 LTC</div>
-                                <div class="mining-power__hide-data mining-power__hide-data--mt16px">Per month:
+                                <div class="mining-power__hide-data" id="litecoin-per-day">Per day: 0.00000000 LTC</div>
+                                <div class="mining-power__hide-data mining-power__hide-data--mt16px"
+                                    id="litecoin-per-month">Per month:
                                     0.00000000 LTC</div>
                             </div>
                             <div class="mining-power__hide-content">
-                                <div class="mining-power__hide-data">Per 3 month:
+                                <div class="mining-power__hide-data" id="litecoin-per-3month">Per 3 month:
                                     0.00000000 LTC</div>
-                                <div class="mining-power__hide-data mining-power__hide-data--mt16px">Per 6 month:
+                                <div class="mining-power__hide-data mining-power__hide-data--mt16px"
+                                    id="litecoin-per-6month">Per 6 month:
                                     0.00000000 LTC</div>
                             </div>
                             <button class="mining-power__hide-btn mining-power__hide-btn--blue">Exchange to
@@ -151,23 +163,28 @@
                                 </svg>
                                 <div class="mining-power__item-currency">Dash</div>
                             </div>
+                            <div class="mining-power__item-used" data-percent-range="dash-range">0%</div>
                             <input type="range" class="mining-power__item-range mining-power__item-range--green"
                                 id="dash-range" min="0" max="25" step="0.00000001">
-                            <label for="dash-range" class="mining-power__item-label"><span class="mining-power__item-span" data-range="dash-range"> 0.00000000</span> DASH</label>
+                            <label for="dash-range" class="mining-power__item-label"><span
+                                    class="mining-power__item-span" data-range="dash-range"> 0.00000000</span>
+                                DASH</label>
                         </div>
                         <img src="../img/common/caret-down-solid.svg" alt="dropdown"
                             class="mining-power__item-dropdown">
 
                         <div class="mining-power__hide">
                             <div class="mining-power__hide-content">
-                                <div class="mining-power__hide-data">Per day: 0.00000000 DASH</div>
-                                <div class="mining-power__hide-data mining-power__hide-data--mt16px">Per month:
+                                <div class="mining-power__hide-data" id="dash-per-day">Per day: 0.00000000 DASH</div>
+                                <div class="mining-power__hide-data mining-power__hide-data--mt16px"
+                                    id="dash-per-month">Per month:
                                     0.00000000 DASH</div>
                             </div>
                             <div class="mining-power__hide-content">
-                                <div class="mining-power__hide-data">Per 3 month:
+                                <div class="mining-power__hide-data" id="dash-per-3month">Per 3 month:
                                     0.00000000 DASH</div>
-                                <div class="mining-power__hide-data mining-power__hide-data--mt16px">Per 6 month:
+                                <div class="mining-power__hide-data mining-power__hide-data--mt16px"
+                                    id="dash-per-6month">Per 6 month:
                                     0.00000000 DASH</div>
                             </div>
                             <button class="mining-power__hide-btn mining-power__hide-btn--green">Exchange to

@@ -41,6 +41,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             &--little {
                 padding: 16px 24px;
             }
@@ -59,7 +60,7 @@
             margin-left: 16px;
         }
         &-range {
-            width: 240px;
+            width: 200px;
             height: 24px;
             cursor: pointer;
             -webkit-appearance: none;
@@ -157,13 +158,15 @@
                 cursor: not-allowed;
             }
         }
-        &-label {
+        &-label, &-used {
             font-weight: 600;
             font-size: 20px;
             line-height: 24px;
             letter-spacing: 0.04em;
             text-align: center;
-            width: 216px;
+        }
+        &-label {
+            width: 212px;
         }
         &-dropdown {
             display: block;
