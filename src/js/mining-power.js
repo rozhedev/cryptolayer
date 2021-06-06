@@ -26,7 +26,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
     const rangeInputs = document.querySelectorAll('.mining-power__item-range'),
         rangeSpans = document.querySelectorAll('.mining-power__item-span'),
-        usedSpans = document.querySelectorAll('.mining-power__item-used');
+        usedSpans = document.querySelectorAll('.mining-power__item-used'),
+        hideBtns = document.querySelectorAll('.mining-power__hide-btn'),
+        miningPopup = document.querySelector('.mining-power__popup');
 
     rangeInputs.forEach((rangeItem) => {
         rangeItem.addEventListener('input', function () {
@@ -44,15 +46,26 @@ window.addEventListener('DOMContentLoaded', function () {
                     usedItem.textContent = `${(+rangeItem.value * 20).toFixed()}%`;
                     return false;
                 }
-                if (rangeItem.id == 'litecoin-range' && usedItem.getAttribute('data-percent-range') == 'litecoin-range') {
-                    usedItem.textContent = `${(+rangeItem.value * 4).toFixed()}%`;
-                    return false;
-                }
-                if (rangeItem.id == 'dash-range' && usedItem.getAttribute('data-percent-range') == 'dash-range') {
+                if ((rangeItem.id == 'litecoin-range' && usedItem.getAttribute('data-percent-range') == 'litecoin-range') || (rangeItem.id == 'dash-range' && usedItem.getAttribute('data-percent-range') == 'dash-range')) {
                     usedItem.textContent = `${(+rangeItem.value * 4).toFixed()}%`;
                     return false;
                 }
             })
+        })
+    })
+
+    setTimeout(function () {
+        miningPopup.classList.toggle('popup-fade');
+    }, 5000);
+    setTimeout(function () {
+        miningPopup.classList.toggle('popup-fade');
+    }, 10000);
+    hideBtns.forEach((hideBtn) => {
+        hideBtn.addEventListener('click', function () {
+            miningPopup.classList.toggle('popup-fade');
+            setTimeout(function () {
+                miningPopup.classList.toggle('popup-fade');
+            }, 5000);
         })
     })
 })

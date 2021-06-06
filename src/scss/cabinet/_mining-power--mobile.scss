@@ -30,11 +30,14 @@
             }
             &--active {
                 margin-bottom: 152px;
+                .mining-power__hide {
+                    height: 152px;
+                }
             }
         }
         &__hide {
             width: 528px;
-            height: 152px;
+            height: 0;
             padding: 12px 0;
             justify-content: space-around;
             &-data {
@@ -42,12 +45,18 @@
                 line-height: 15px;
             }
         }
+        &__popup {
+            right: 200px;
+        }
     }
 }
 
 @media screen and (max-width: 927px) {
     .mining-power__content {
         left: calc(50% - 264px);
+    }
+    .mining-power__popup {
+        right: 248px;
     }
 }
 
@@ -69,6 +78,9 @@
         &__item {
             width: 340px;
             height: 148px;
+            &-content {
+                padding: 16px 24px;
+            }
             svg {
                 height: 40px;
             }
@@ -93,12 +105,19 @@
             }
             &--active {
                 margin-bottom: 200px;
+                .mining-power__hide {
+                    height: 208px;
+                }
             }
         }
         &__hide {
             width: 340px;
-            height: 208px;
+            height: 0;
             text-align: center;
+        }
+        .mining-power__popup {
+            top: 92px;
+            right: 56px;
         }
     }
 }

@@ -38,9 +38,25 @@
     color: $bgColor;
 }
 
-
-
 @mixin whiteContainer {
     border-radius: 16px;
     background-color: #fff;
+}
+
+@mixin popupStyle {
+    @include littleDescrStyle;
+    border-radius: 16px;
+    background-color: $blue;
+    color: #fff;
+    opacity: 1;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    transition: ease .7s all;
+    font-size: 16px;
+    &-icon {
+        font-size: 48px;
+        margin-right: 16px;
+    }
 }
