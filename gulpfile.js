@@ -25,21 +25,21 @@ let path = {
     clean: "./" + project_folder + "/"
 }
 
-let { src, dest } = require('gulp'),
-    gulp = require('gulp'),
-    browsersync = require('browser-sync').create(),
-    fileinclude = require('gulp-file-include'),
-    htmlmin = require('gulp-htmlmin'),
-    scss = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    group_media = require('gulp-group-css-media-queries'),
-    clean_css = require('gulp-clean-css'),
-    rename = require('gulp-rename'),
-    uglify = require('gulp-uglify-es').default,
-    imagemin = require('gulp-imagemin'),
-    ttf2woff = require('gulp-ttf2woff'),
-    ttf2woff2 = require('gulp-ttf2woff2'),
-    fonter = require('gulp-fonter');
+let { src, dest } = require("gulp"),
+    gulp = require("gulp"),
+    browsersync = require("browser-sync").create(),
+    fileinclude = require("gulp-file-include"),
+    htmlmin = require("gulp-htmlmin"),
+    scss = require("gulp-sass")(require("dart-sass")),
+    autoprefixer = require("gulp-autoprefixer"),
+    group_media = require("gulp-group-css-media-queries"),
+    clean_css = require("gulp-clean-css"),
+    rename = require("gulp-rename"),
+    uglify = require("gulp-uglify-es").default,
+    imagemin = require("gulp-imagemin"),
+    ttf2woff = require("gulp-ttf2woff"),
+    ttf2woff2 = require("gulp-ttf2woff2"),
+    fonter = require("gulp-fonter");
 
 function browserSync() {
     browsersync.init({
@@ -88,9 +88,7 @@ function css() {
 function js() {
     return src(path.src.js)
         .pipe(fileinclude())
-        // .pipe(
-        //     uglify()
-        // )
+        .pipe(uglify())
         .pipe(
             rename({
                 extname: ".min.js"
@@ -123,12 +121,12 @@ function fonts() {
         .pipe(dest(path.build.fonts))
 }
 
-gulp.task('otf2ttf', function () {
-    return src([source_folder + '/fonts/*.otf'])
+gulp.task("otf2ttf", function () {
+    return src([source_folder + "/fonts/*.otf"])
         .pipe(fonter({
-            formats: ['ttf']
+            formats: ["ttf"]
         }))
-        .pipe(dest(source_folder + '/fonts/'))
+        .pipe(dest(source_folder + "/fonts/"))
 })
 
 function watchFiles() {
@@ -138,14 +136,14 @@ function watchFiles() {
     gulp.watch([path.watch.img], images);
 }
 
-let build = gulp.series(gulp.parallel(js, css, html, images, fonts));
+let build = gulp.series(gulp.parallel(html, css, js, fonts, images));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.html = html;
+exports.css = css;
+exports.js = js;
 exports.fonts = fonts;
 exports.images = images;
-exports.js = js;
-exports.css = css;
-exports.html = html;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

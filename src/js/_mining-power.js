@@ -1,15 +1,12 @@
-'use strict'
 
-window.addEventListener('DOMContentLoaded', function () {
-    // Аккордеон
+const miningDataItems = document.querySelectorAll('.mining-power__item'),
+    dropdownItems = document.querySelectorAll('.mining-power__item-dropdown');
 
-    const miningDataItems = document.querySelectorAll('.mining-power__item'),
-        dropdownItems = document.querySelectorAll('.mining-power__item-dropdown');
-
+if (dropdownItems.length > 0) {
     dropdownItems.forEach((item) => {
         item.addEventListener('click', function () {
             const parent = item.parentNode;
-
+    
             if (parent.classList.contains('mining-power__item--active')) {
                 parent.classList.remove('mining-power__item--active');
                 item.classList.remove('mining-power__item-dropdown--active');
@@ -24,15 +21,16 @@ window.addEventListener('DOMContentLoaded', function () {
                 item.classList.add('mining-power__item-dropdown--active');
             }
         })
-    })
+    })   
+}
 
-    // Связиваю range с индикатором валюты и процентов
+const rangeInputs = document.querySelectorAll('.mining-power__item-range'),
+    rangeSpans = document.querySelectorAll('.mining-power__item-span'),
+    usedSpans = document.querySelectorAll('.mining-power__item-used'),
+    hideBtns = document.querySelectorAll('.mining-power__hide-btn'),
+    miningPopup = document.querySelector('.mining-power__popup');
 
-    const rangeInputs = document.querySelectorAll('.mining-power__item-range'),
-        rangeSpans = document.querySelectorAll('.mining-power__item-span'),
-        usedSpans = document.querySelectorAll('.mining-power__item-used'),
-        miningPopup = document.querySelector('.mining-power__popup');
-
+if (rangeInputs.length > 0) {
     rangeInputs.forEach((rangeItem) => {
         rangeItem.addEventListener('input', function () {
             rangeSpans.forEach((spanItem) => {
@@ -49,25 +47,28 @@ window.addEventListener('DOMContentLoaded', function () {
                     usedItem.textContent = `${(+rangeItem.value * 20).toFixed()}%`;
                     return false;
                 }
-                if (rangeItem.id == 'litecoin-range' && usedItem.getAttribute('data-percent-range') == 'litecoin-range') {
-                    usedItem.textContent = `${(+rangeItem.value * 4).toFixed()}%`;
-                    return false;
-                }
-                if (rangeItem.id == 'dash-range' && usedItem.getAttribute('data-percent-range') == 'dash-range') {
+                if ((rangeItem.id == 'litecoin-range' && usedItem.getAttribute('data-percent-range') == 'litecoin-range') || (rangeItem.id == 'dash-range' && usedItem.getAttribute('data-percent-range') == 'dash-range')) {
                     usedItem.textContent = `${(+rangeItem.value * 4).toFixed()}%`;
                     return false;
                 }
             })
         })
-    })
+    })   
+}
 
-    // Модальное окно
+if (miningPopup) {
+	setTimeout(function () {
+	    miningPopup.classList.toggle('popup-fade');
+	}, 5000);
+}
 
-    setTimeout(function () {
-        miningPopup.classList.toggle('popup-fade');
-    }, 3000);
-
-    setTimeout(function () {
-        miningPopup.classList.toggle('popup-fade');
-    }, 8000);
-})
+if (hideBtns.length > 0) {
+	hideBtns.forEach((hideBtn) => {
+	    hideBtn.addEventListener('click', function () {
+	        miningPopup.classList.toggle('popup-fade');
+	        setTimeout(function () {
+	            miningPopup.classList.toggle('popup-fade');
+	        }, 5000);
+	    })
+	})
+}

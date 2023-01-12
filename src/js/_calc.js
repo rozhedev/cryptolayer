@@ -17,33 +17,7 @@ const miningPrice = document.querySelector('#mining-price'),
 let replenishRate, withdrawRate;
 
 
-for (let replenishCur of investCurrencyBtns) {
-    replenishCur.addEventListener('click', function () {
-        chooseCurrency(replenishCur, investCurrencyBtns);
-        checkLimits();
-        calcMiningPrice();
-        priceFor1();
-        calcProfit();
-    })
-}
-
-for (let withdrawCur of withdrawCurrencyBtns) {
-    withdrawCur.addEventListener('click', function () {
-        chooseCurrency(withdrawCur, withdrawCurrencyBtns);
-        calcProfit();
-    })
-}
-
-investAmount.addEventListener('input', function () {
-    calcMiningPrice();
-    calcProfit();
-})
-
-periodMining.addEventListener('input', function () {
-    checkLimits();
-    calcProfit();
-})
-
+// * FUNCTIONS
 // Выбор нужной валюты
 
 function chooseCurrency(item, currencyBtns) {
@@ -171,4 +145,42 @@ function calcProfit() {
             }
         }
     }
+}
+
+
+// * CALL FUNCTIONS
+
+if (investCurrencyBtns.length > 0) {
+    for (let replenishCur of investCurrencyBtns) {
+        replenishCur.addEventListener('click', function () {
+            chooseCurrency(replenishCur, investCurrencyBtns);
+            checkLimits();
+            calcMiningPrice();
+            priceFor1();
+            calcProfit();
+        })
+    }
+}
+
+if (withdrawCurrencyBtns.length > 0) {
+    for (let withdrawCur of withdrawCurrencyBtns) {
+        withdrawCur.addEventListener('click', function () {
+            chooseCurrency(withdrawCur, withdrawCurrencyBtns);
+            calcProfit();
+        })
+    }
+}
+
+if (investAmount) {
+    investAmount.addEventListener('input', function () {
+        calcMiningPrice();
+        calcProfit();
+    })
+}
+
+if (periodMining) {
+    periodMining.addEventListener('input', function () {
+        checkLimits();
+        calcProfit();
+    }) 
 }

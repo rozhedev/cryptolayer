@@ -1,22 +1,22 @@
-// Components
+// Base
 
 @import "base/nullstyle.scss";
 @import "base/fonts";
 @import "base/common";
 
-// Blocks
+// Components
 
-@import "blocks/header";
-@import "blocks/main";
-@import "blocks/about";
-@import "blocks/statistics";
-@import "blocks/mining-price";
-@import "blocks/calc-income";
-@import "blocks/advant";
-@import "blocks/payment";
-@import "blocks/partner";
-@import "blocks/our-partners";
-@import "blocks/footer";
+@import "components/header";
+@import "components/main";
+@import "components/about";
+@import "components/statistics";
+@import "components/mining-price";
+@import "components/calc-income";
+@import "components/advant";
+@import "components/payment";
+@import "components/partner";
+@import "components/our-partners";
+@import "components/footer";
 
 // Pages
 

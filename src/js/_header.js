@@ -82,7 +82,7 @@ if (menuLinks.length > 0) {
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', function () {
-    if (this.pageYOffset < 160 || this.pageYOffset > 1700) {
+    if (this.screenY < 160 || this.screenY > 1700) {
         header.style.visibility = 'visible';
         header.style.opacity = '1';
         if (document.documentElement.clientWidth > 769) {
