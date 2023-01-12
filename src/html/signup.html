@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CRYPTOLAYER</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
+    @@include('chunks/_head.html', {
+        "title": "Sign up",
+        "cssPath": "css/style.min.css"
+    })
 
 <body>
-    @@include('_header.html')
+    @@include('chunks/_header.html')
 
     <section class="signup">
         <div class="container">
@@ -66,22 +62,24 @@
                     </div>
 
                     <div class="signup__form-captcha">reCaptcha</div>
-                    <label class="signup__form-terms signup__form-control">
-                        <input type="checkbox" name="terms" id="checkbox" class="signup__form-checkbox">
-                        <span>I agree with <a class="signup-link link" href="terms.html">Terms and Conditions</a>
-                        </span>
+
+                    <div class="signup__form-control signup__form-terms checkbox">
+                        <input type="checkbox" name="checkbox" id="checkbox" class="checkbox__input">
+                        <label for="checkbox" class="checkbox__label">
+                            I agree with <a class="signup-link link" href="terms.html">Terms and Conditions</a>
+                        </label>
                         <small>Error message</small>
-                    </label>
+                    </div>
                     <button class="signup__form-btn">Create account</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <script src="https://kit.fontawesome.com/f77f4500aa.js" crossorigin="anonymous"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/script.min.js"></script>
-    <script src="js/validate.min.js"></script>
+    @@include('chunks/_js.html', {
+        "wowLibPath": "js/wow.min.js",
+        "scriptPath": "js/script.min.js"
+    })
 </body>
 
 </html>

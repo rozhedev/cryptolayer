@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CRYPTOLAYER</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
+@@include('chunks/_head.html', {
+"title": "CRYPTOLAYER - About",
+"cssPath": "css/style.min.css"
+})
 
 <body>
-    @@include('_header.html')
+    @@include('chunks/_header.html')
 
     <section class="about-page">
         <div class="container">
@@ -68,11 +64,11 @@
                     </div>
                     <img src="img/about/data-center3.png" alt="data-center3"
                         class="about-page__img about-page__img--order6  animate__animated animate__fadeInRight wow">
-                    <div class="about-page__comp  animate__animated animate__fadeIn wow">                     
+                    <div class="about-page__comp  animate__animated animate__fadeIn wow">
                         <a href="#"><img src="img/about/certificate.png" alt="certificate"
                                 class="about-page__comp-img"></a>
                         <div class="about-page__comp-content">
-                             <div class="about-page__comp-label">Company number:</div>
+                            <div class="about-page__comp-label">Company number:</div>
                             <div class="about-page__comp-num">#13066408</div>
                             <a href="#" class="about-page__comp-link about-page__comp-label--little link">VIEW CERTIFICATE</a>
                             <div class="about-page__comp-label--little about-page__comp-label--little">Name and
@@ -92,11 +88,12 @@
         </div>
     </section>
 
-    @@include('_footer.html')
+    @@include('chunks/_footer.html')
 
-    <script src="https://kit.fontawesome.com/f77f4500aa.js" crossorigin="anonymous"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/script.min.js"></script>
+    @@include('chunks/_js.html', {
+        "wowLibPath": "js/wow.min.js",
+        "scriptPath": "js/script.min.js"
+    })
 </body>
 
 </html>

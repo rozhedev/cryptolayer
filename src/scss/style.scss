@@ -1,11 +1,16 @@
-// Base
+// * Use autocomplete short definition without filetype
+// Libs
+@import "libs/animate";
 
-@import "base/nullstyle.scss";
+// Base
+@import "base/nullstyle";
 @import "base/fonts";
+@import "base/vars";
+@import "base/mixins";
 @import "base/common";
 
 // Components
-
+@import "components/checkbox";
 @import "components/header";
 @import "components/main";
 @import "components/about";
@@ -19,14 +24,12 @@
 @import "components/footer";
 
 // Pages
-
 @import "pages/signup-login";
 @import "pages/about";
 @import "pages/faq";
 @import "pages/terms";
 
 // Cabinet
-
 @import "cabinet/header-cabinet";
 @import "cabinet/nav-cabinet";
 @import "cabinet/dashboard";

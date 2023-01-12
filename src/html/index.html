@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CRYPTOLAYER</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
+@@include('chunks/_head.html', {
+"title": "CRYPTOLAYER - Main",
+"cssPath": "css/style.min.css"
+})
 
 <body>
-    @@include('_header.html')
+    @@include('chunks/_header.html')
 
     <section class="main" id="main">
         <div class="container">
@@ -150,7 +146,7 @@
 
     <!-- Calculating of income -->
 
-    <section class="calc">
+    <section class="calc" id="income-calc">
         <div class="container">
             <h2 class="title">Calculating of income</h2>
             <div class="calc__step animate__animated animate__fadeIn wow">
@@ -402,17 +398,18 @@
             </div>
             <div class="questions animate__animated animate__fadeIn wow">
                 <div class="questions__title">Still have questions?</div>
-                <p class="questions__descr">Go to the <a href="#" class="questions__link link">FAQ</a> section or start
+                <p class="questions__descr">Go to the <a href="faq.html" class="questions__link link">FAQ</a> section or start
                     chatting with our operators.</p>
             </div>
         </div>
     </section>
 
-    @@include('_footer.html')
+    @@include('chunks/_footer.html')
 
-    <script src="https://kit.fontawesome.com/f77f4500aa.js" crossorigin="anonymous"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/script.min.js"></script>
+    @@include('chunks/_js.html', {
+    "wowLibPath": "js/wow.min.js",
+    "scriptPath": "js/script.min.js"
+    })
 </body>
 
 </html>

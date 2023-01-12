@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRYPTOLAYER</title>
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
+    @@include('chunks/_head.html', {
+        "title": "CRYPTOLAYER - Terms",
+        "cssPath": "css/style.min.css"
+    })
 
 <body>
-    @@include('_header.html')
+    @@include('chunks/_header.html')
 
     <section class="terms">
         <div class="container">
@@ -117,8 +114,11 @@
             </div>
         </div>
     </section>
-    <script src="js/wow.min.js"></script>
-    <script src="js/script.min.js"></script>
+    
+    @@include('chunks/_js.html', {
+        "wowLibPath": "js/wow.min.js",
+        "scriptPath": "js/script.min.js"
+    })
 </body>
 
 </html>
