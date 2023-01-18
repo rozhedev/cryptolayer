@@ -1,0 +1,44 @@
+[
+    {
+        "animType": "animate__fadeInLeft",
+        "imgPath": "img/statistics/calendar.svg",
+        "imgAlt": "calendar",
+        "itemTitle": "running days",
+        "value": "117"
+    },
+    {
+        "animType": "animate__fadeIn",
+        "imgPath": "img/statistics/users.svg",
+        "imgAlt": "users",
+        "itemTitle": "total accounts",
+        "value": "27908"
+    },
+    {
+        "animType": "animate__fadeInRight",
+        "imgPath": "img/statistics/wallet.svg",
+        "imgAlt": "wallet",
+        "itemTitle": "total deposited",
+        "value": "$5146585"
+    },
+    {
+        "animType": "animate__fadeInLeft",
+        "imgPath": "img/statistics/member-card.svg",
+        "imgAlt": "member-card",
+        "itemTitle": "members online",
+        "value": "479"
+    },
+    {
+        "animType": "animate__fadeIn",
+        "imgPath": "img/statistics/user.svg",
+        "imgAlt": "user",
+        "itemTitle": "newest member",
+        "value": "steve_23"
+    },
+    {
+        "animType": "animate__fadeInRight",
+        "imgPath": "img/statistics/withdraw.svg",
+        "imgAlt": "withdraw",
+        "itemTitle": "TOTAL WITHDRAW",
+        "value": "$4207363"
+    }
+]

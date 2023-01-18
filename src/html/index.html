@@ -20,7 +20,7 @@
         </div>
     </section>
 
-    <!-- About -->
+    <!-- * About -->
 
     <section class="about">
         <div class="container">
@@ -46,105 +46,31 @@
         </div>
     </section>
 
-    <!-- Statistics -->
+    <!-- * Statistics -->
 
     <section class="stat" id="stat">
         <div class="container">
             <h2 class="title">Company statistics</h2>
             <div class="stat__inner">
-                <div class="stat__item animate__animated animate__fadeInLeft wow">
-                    <img src="img/statistics/calendar.svg" alt="calendar" class="stat__item-img">
-                    <div class="stat__item-content">
-                        <div class="stat__item-title">running days</div>
-                        <div class="stat__item-data">117</div>
-                    </div>
-                </div>
-                <div class="stat__item animate__animated animate__fadeIn wow">
-                    <img src="img/statistics/users.svg" alt="users" class="stat__item-img">
-                    <div class="stat__item-content">
-                        <div class="stat__item-title">total accounts</div>
-                        <div class="stat__item-data">27908</div>
-                    </div>
-                </div>
-                <div class="stat__item animate__animated animate__fadeInRight wow">
-                    <img src="img/statistics/wallet.svg" alt="wallet" class="stat__item-img">
-                    <div class="stat__item-content">
-                        <div class="stat__item-title">total deposited</div>
-                        <div class="stat__item-data">$5146585</div>
-                    </div>
-                </div>
-                <div class="stat__item animate__animated animate__fadeInLeft wow">
-                    <img src="img/statistics/member-card.svg" alt="member-card" class="stat__item-img">
-                    <div class="stat__item-content">
-                        <div class="stat__item-title">members online</div>
-                        <div class="stat__item-data">479</div>
-                    </div>
-                </div>
-                <div class="stat__item animate__animated animate__fadeIn wow">
-                    <img src="img/statistics/user.svg" alt="user" class="stat__item-img">
-                    <div class="stat__item-content">
-                        <div class="stat__item-title">NEWEST MEMBER</div>
-                        <div class="stat__item-data">TRADE23</div>
-                    </div>
-                </div>
-                <div class="stat__item animate__animated animate__fadeInRight wow">
-                    <img src="img/statistics/withdraw.svg" alt="withdraw" class="stat__item-img">
-                    <div class="stat__item-content">
-                        <div class="stat__item-title">TOTAL WITHDRAW</div>
-                        <div class="stat__item-data">$4207363</div>
-                    </div>
-                </div>
+                @@loop("components/_stat-item.html", "../json/stat-items.json")
             </div>
         </div>
     </section>
 
-    <!-- Mining price -->
+    <!--* Mining price -->
 
     <section class="price">
         <div class="container">
             <div class="price__inner">
                 <h2 class="title">Mining algorithms</h2>
                 <div class="price__content">
-                    <div class="price__item animate__animated animate__fadeInLeft wow">
-                        <h3 class="price__item-title">SCRYPT</h3>
-                        <div class="price__item-label">Developed for mining:</div>
-                        <div class="price__item-crypto">
-                            <img src="img/common/litecoin.svg" alt="litecoin" class="price__item-img">
-                            <div class="price__item-name">Litecoin</div>
-                        </div>
-                        <div class="price__item-tariff">Price per 1 MH/s</div>
-                        <div class="price__item-cost">0.127 $</div>
-                    </div>
-                    <div class="price__item animate__animated animate__fadeIn wow">
-                        <h3 class="price__item-title">ETHASH</h3>
-                        <div class="price__item-label">Developed for mining:</div>
-                        <div class="price__item-crypto">
-                            <img src="img/common/ethereum.svg" alt="ethereum" class="price__item-img">
-                            <div class="price__item-name">Ethereum</div>
-                        </div>
-                        <div class="price__item-tariff">Price per 1 MH/s</div>
-                        <div class="price__item-cost">0.328 $</div>
-                    </div>
-                    <div class="price__item animate__animated animate__fadeInRight wow">
-                        <h3 class="price__item-title">SHA-256</h3>
-                        <div class="price__item-label">Developed for mining:</div>
-                        <div class="price__item-crypto">
-                            <img src="img/common/bitcoin.svg" alt="bitcoin" class="price__item-img">
-                            <div class="price__item-name">Bitcoin</div>
-                        </div>
-                        <div class="price__item-crypto price__item-crypto--mt16">
-                            <img src="img/common/dash.svg" alt="dash" class="price__item-img">
-                            <div class="price__item-name">Dash</div>
-                        </div>
-                        <div class="price__item-tariff price__item-tariff--mt26">Price per 1 MH/s</div>
-                        <div class="price__item-cost">1.707 $</div>
-                    </div>
+                    @@loop("components/_mining-card.html", "../json/mining-cards.json")
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Calculating of income -->
+    <!-- * Calculating of income -->
 
     <section class="calc" id="income-calc">
         <div class="container">
@@ -225,7 +151,7 @@
         </div>
     </section>
 
-    <!-- Advantages -->
+    <!-- * Advantages -->
 
     <section class="advant" id="advant">
         <div class="container">
@@ -327,7 +253,7 @@
         </div>
     </section>
 
-    <!-- Payment systems -->
+    <!-- * Payment systems -->
 
     <section class="payment">
         <div class="container">
@@ -351,7 +277,7 @@
         </div>
     </section>
 
-    <!-- Partner program -->
+    <!-- * Partner program -->
 
     <section class="partner">
         <div class="container">
@@ -384,7 +310,7 @@
         </div>
     </section>
 
-    <!-- Our partners -->
+    <!-- * Our partners -->
 
     <section class="our-partners">
         <div class="container">

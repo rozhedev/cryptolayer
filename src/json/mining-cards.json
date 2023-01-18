@@ -1,0 +1,35 @@
+[
+    {
+        "animType": "animate__fadeInLeft",
+        "itemTitle": "SCRYPT",
+        "imgPath1": "img/common/litecoin.svg",
+        "imgAlt1": "litecoin",
+        "curName1": "Litecoin",
+        "imgPath2": "",
+        "imgAlt2": "",
+        "curName2": "",
+        "value": "0.127 $"
+    },
+    {
+        "animType": "animate__fadeIn",
+        "itemTitle": "ETHASH",
+        "imgPath1": "img/common/ethereum.svg",
+        "imgAlt1": "ethereum",
+        "curName1": "Ethereum",
+        "imgPath2": "",
+        "imgAlt2": "",
+        "curName2": "",
+        "value": "0.328 $"
+    },
+    {
+        "animType": "animate__fadeInRight",
+        "itemTitle": "SHA-256",
+        "imgPath1": "img/common/bitcoin.svg",
+        "imgAlt1": "bitcoin",
+        "curName1": "Bitcoin",
+        "imgPath2": "img/common/dash.svg",
+        "imgAlt2": "dash",
+        "curName2": "Dash",
+        "value": "0.127 $"
+    }
+]

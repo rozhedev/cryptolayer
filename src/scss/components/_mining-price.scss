@@ -31,10 +31,7 @@
             display: flex;
             align-items: center;
             width: 42px;
-            margin-top: 32px;
-            &--mt16 {
-                margin-top: 16px;
-            }
+            margin-top: 24px;
         }
         &-img {
             width: 24px;
@@ -48,10 +45,7 @@
         &-tariff {
             @include littleDescrStyle;
             color: #fff;
-            margin-top: 72px;
-            &--mt26 {
-                margin-top: 26px;
-            }
+            margin-top: 58px;
         }
         &-cost {
             margin-top: 12px;
@@ -63,6 +57,11 @@
             &:first-child {
                 margin-top: 20px;
             }
+        }
+    }
+    .price__item:last-of-type {
+        .price__item-tariff {
+            margin-top: 24px;
         }
     }
 }
