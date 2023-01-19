@@ -1,5 +1,5 @@
 .partner {
-    color: #fff;
+    color: $light;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -41,7 +41,7 @@
     &__descr {
         @include bigDescrStyle;
         text-align: justify;
-        color: #fff;
+        color: $light;
         width: 712px;
         line-height: 150%;
         &-item:nth-child(2) {
@@ -85,7 +85,7 @@
         }
         &__descr {
             @include littleDescrStyle;
-            color: #fff;
+            color: $light;
             width: 368px;
             &-item:nth-child(2) {
                 margin-top: 32px;

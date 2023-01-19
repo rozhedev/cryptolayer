@@ -1,0 +1,22 @@
+[
+    {
+       "itemTitle": "Purchase",
+       "advantDescr": "Don’t waste time searching for equipment and waiting for delivery. Don’t spend time on customs clearance and don't attract the attention of other officials. Don’t lose money while your miner is on the way.",
+       "disadvantDescr": "We order large batches of new miners, they pass through customs quickly and legally. You rent a miner that’s already installed in a data center and ready to work."
+    },
+    {
+        "itemTitle": "Setup and maintenance",
+        "advantDescr": "Senior technicians can mount a mining rig in 2-3 hours. It takes days for an amateur, and you lose both time and money. You are responsible for the efficiency and reliability of the rig.",
+        "disadvantDescr": "Our certified engineers set up new miners and monitor the operating ones. We make sure our rigs are in a perfect condition and work flawlessly."
+     },
+     {
+        "itemTitle": "Mining facility",
+        "advantDescr": "You need a reliable and well-ventilated place or endure heat and noise at your home. You constantly worry about the safety of your investments.",
+        "disadvantDescr": "Professional industrial infrastructure, climate control and round-the-clock supervision create the most reliable and secure mining conditions."
+     },
+     {
+        "itemTitle": "Electricity",
+        "advantDescr": "You need a cheap power source. Your residential electrical wiring will wear out quickly, leading to power outages and fires. Miners break down without a continuous power supply.",
+        "disadvantDescr": "We have large power supply contracts and several backup power sources are always standing by. Our electricity is reasonably priced and legal. Our data centers work without interruptions."
+     }
+]

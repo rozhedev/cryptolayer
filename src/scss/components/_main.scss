@@ -6,7 +6,7 @@
         letter-spacing: 0.16em;
         line-height: 55px;
         text-align: center;
-        color: #fff;
+        color: $light;
     }
     &__btn {
         @include btnStyle;
@@ -18,7 +18,7 @@
         font-size: 24px;
         letter-spacing: 0.08em;
         &:hover {
-            color: #fff;
+            color: $light;
             background-color: $bgColor;
             box-shadow: 0 0 8px 4px $orange;
         }

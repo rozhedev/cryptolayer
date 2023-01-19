@@ -14,7 +14,7 @@
         background-color: rgba($color: $violet, $alpha: 0.75);
         border-radius: 16px;
         padding: 40px;
-        color: #fff;
+        color: $light;
         &-title {
             font-family: $titleFont;
             font-size: 28px;
@@ -44,7 +44,7 @@
         }
         &-tariff {
             @include littleDescrStyle;
-            color: #fff;
+            color: $light;
             margin-top: 58px;
         }
         &-cost {

@@ -1,0 +1,14 @@
+// * DEFAULT 
+
+html::-webkit-scrollbar {
+    width: 0.8rem; 
+ }
+
+html::-webkit-scrollbar-track {
+  background-color: $bgColor;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: $light;
+  border-radius: 4px;
+}

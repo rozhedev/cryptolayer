@@ -1,0 +1,47 @@
+[
+    {
+        "mainClass": "calc__step-currency",
+        "modifColor": "calc__step-currency--orange",
+        "dataValue": "43500",
+        "modifSize": "calc__step-currency--little-mobile",
+        "imgPath": "img/common/bitcoin.svg",
+        "imgAlt": "bitcoin",
+        "fiatCurrency": ""
+    },
+    {
+        "mainClass": "calc__step-currency",
+        "modifColor": "calc__step-currency--violet",
+        "dataValue": "3400",
+        "modifSize": "calc__step-currency--little",
+        "imgPath": "img/common/ethereum.svg",
+        "imgAlt": "ethereum",
+        "fiatCurrency": ""
+    },
+    {
+        "mainClass": "calc__step-currency",
+        "modifColor": "calc__step-currency--blue",
+        "dataValue": "300",
+        "modifSize": "calc__step-currency--little",
+        "imgPath": "img/common/litecoin.svg",
+        "imgAlt": "litecoin",
+        "fiatCurrency": ""
+    },
+    {
+        "mainClass": "calc__step-currency",
+        "modifColor": "calc__step-currency--green",
+        "dataValue": "310",
+        "modifSize": "calc__step-currency--little-mobile",
+        "imgPath": "img/common/dash.svg",
+        "imgAlt": "dash",
+        "fiatCurrency": ""
+    },
+    {
+        "mainClass": "calc__step-currency",
+        "modifColor": "calc__step-currency--bgcolor",
+        "dataValue": "1",
+        "modifSize": "",
+        "imgPath": "",
+        "imgAlt": "",
+        "fiatCurrency": "$"
+    }
+]

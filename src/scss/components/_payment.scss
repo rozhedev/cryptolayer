@@ -14,7 +14,7 @@
     }
     &__text {
         @include littleDescrStyle;
-        color: #fff;
+        color: $light;
         margin-top: 40px;
         text-align: right;
         span {

@@ -27,7 +27,7 @@
         }
     }
     &__item {
-        background-color: #fff;
+        background-color: $light;
         width: 784px;
         border-radius: 16px 16px 0 0;
         display: flex;
@@ -75,7 +75,7 @@
             &::-webkit-slider-runnable-track,
             &:focus::-ms-fill-lower,
             &:focus::-ms-fill-upper {
-                background-color: #fff;
+                background-color: $light;
             }
             &::-webkit-slider-runnable-track {
                 cursor: pointer;
@@ -218,7 +218,7 @@
             font-size: 16px;
             line-height: 20px;
             text-align: center;
-            color: #fff;
+            color: $light;
             &:hover {
                 color: $bgColor;
             }
@@ -240,7 +240,7 @@
         top: 112px;
         right: 208px;
         &-icon {
-            color: #fff;
+            color: $light;
         }
     }
     .mining-power__popup.popup-fade {

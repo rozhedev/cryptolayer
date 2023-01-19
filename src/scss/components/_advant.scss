@@ -1,5 +1,5 @@
 .advant {
-    color: #fff;
+    color: $light;
     &__subtitle {
         width: 960px;
         margin: 64px auto 0;
@@ -47,7 +47,7 @@
         }
         &-descr {
             @include bigDescrStyle;
-            color: #fff;
+            color: $light;
             width: 480px;
             line-height: 26px;
             text-align: justify;
@@ -60,7 +60,7 @@
         padding: 17px;
         margin: 56px auto 0;
         &:hover {
-            box-shadow: 0 0 4px 4px #fff;
+            box-shadow: 0 0 4px 4px $light;
         }
     }
 }

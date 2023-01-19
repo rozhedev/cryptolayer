@@ -10,7 +10,7 @@
     border-radius: 16px;
     transition: 0.5s all;
     &:hover {
-        background-color: #fff;
+        background-color: $light;
         border-color: $bgColor;
         box-shadow: 0 0 4px 2px $bgColor;
     }
@@ -19,6 +19,22 @@
     }
     @media screen and (max-width: 429px) {
         font-size: 16px;
+    }
+}
+
+@mixin svgAnim {
+    svg {
+        margin-right: 2px;
+        width: 24px;
+        width: 24px;
+        transition: 0.5s all;
+        fill: $light;
+    }
+    &:hover {
+        color: $orange;
+        svg {
+            fill: $orange;
+        }
     }
 }
 
@@ -38,14 +54,14 @@
 
 @mixin whiteContainer {
     border-radius: 16px;
-    background-color: #fff;
+    background-color: $light;
 }
 
 @mixin popupStyle {
     @include littleDescrStyle;
     border-radius: 16px;
     background-color: $blue;
-    color: #fff;
+    color: $light;
     opacity: 1;
     padding: 12px;
     display: flex;

@@ -1,6 +1,6 @@
 .about-page {
     margin-top: 176px;
-    color: #fff;
+    color: $light;
     .title {
         margin-bottom: 48px;
     }
@@ -31,7 +31,7 @@
     }
     &__descr {
         @include littleDescrStyle;
-        color: #fff;
+        color: $light;
         line-height: 22px;
         text-align: justify;
         p:last-child {
@@ -95,7 +95,7 @@
             color: $orange;
         }
         &-link {
-            color: #fff;
+            color: $light;
             margin: 40px 0;
         }
         &-name {

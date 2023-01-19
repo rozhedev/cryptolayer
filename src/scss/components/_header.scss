@@ -5,8 +5,8 @@
     left: 0;
     width: 100%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.9);
-    transition: .7s all;
+    background-color: $overlay-color;
+    transition: 0.7s all;
     height: 96px;
     &__inner,
     .menu__body,
@@ -43,10 +43,8 @@
             line-height: 20px;
             color: #fff;
             text-transform: uppercase;
-            &:hover {
-                color: $orange;
-                transition: 0.5s all;
-            }
+            transition: 0.5s all;
+            @include svgAnim;
         }
         &__account {
             width: 228px;
@@ -94,12 +92,12 @@
                     border-radius: 4px;
                 }
                 &::before {
-                    content: "";
+                    content: '';
                     top: 0;
                     width: 56px;
                 }
                 &::after {
-                    content: "";
+                    content: '';
                     bottom: 0;
                     width: 24px;
                 }
@@ -136,7 +134,7 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100% - 76px);
-                background-color: rgba(0, 0, 0, 0.72);
+                background-color: $overlay-color;
                 padding: 16vh 40px;
                 transition: left 0.5s ease 0s;
                 overflow: auto;
@@ -144,7 +142,7 @@
                     left: 0;
                 }
                 &::before {
-                    content: "";
+                    content: '';
                     position: fixed;
                     left: 0;
                     top: 0;

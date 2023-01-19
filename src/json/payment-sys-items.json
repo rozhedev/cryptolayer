@@ -1,0 +1,32 @@
+[
+    {
+        "order": "payment__item--order1",
+        "imgPath": "img/payment/Bitcoin.svg",
+        "imgAlt": "Bitcoin"
+    },
+    {
+        "order": "payment__item--order4",
+        "imgPath": "img/payment/Ethereum.svg",
+        "imgAlt": "Ethereum"
+    },
+    {
+        "order": "payment__item--order2",
+        "imgPath": "img/payment/Maestro.svg",
+        "imgAlt": "Maestro"
+    },
+    {
+        "order": "payment__item--order5",
+        "imgPath": "img/payment/MasterCard.svg",
+        "imgAlt": "MasterCard"
+    },
+    {
+        "order": "payment__item--order3",
+        "imgPath": "img/payment/Litecoin.svg",
+        "imgAlt": "Litecoin"
+    },
+    {
+        "order": "payment__item--order6",
+        "imgPath": "img/payment/Dash.svg",
+        "imgAlt": "Dash"
+    }
+]

@@ -85,17 +85,17 @@
         flex-wrap: wrap;
     }
     &__link {
-        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $light;
         transition: 0.5s all;
-        &:hover {
-            color: $orange;
-        }
+        @include svgAnim;
     }
     &__sign-up,
     &__log-in {
         span {
             margin-left: 8px;
-            vertical-align: middle;
         }
     }
 

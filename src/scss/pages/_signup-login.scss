@@ -19,7 +19,7 @@
     }
     &__upline {
         background-color: $blue;
-        color: #fff;
+        color: $light;
         border-radius: 8px;
         width: 320px;
         height: 64px;
@@ -83,7 +83,7 @@
             background-color: $bgColor;
             padding: 16px;
             margin: 24px auto 0;
-            color: #fff;
+            color: $light;
         }
         &-terms {
             cursor: pointer;

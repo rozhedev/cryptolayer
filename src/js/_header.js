@@ -82,18 +82,20 @@ if (menuLinks.length > 0) {
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', function () {
-    if (this.screenY < 160 || this.screenY > 1700) {
-        header.style.visibility = 'visible';
-        header.style.opacity = '1';
-        if (document.documentElement.clientWidth > 769) {
-            header.style.height = '96px';
-        } else {
-            header.style.height = '80px';
+    if (header) {
+        if (this.screenY < 160 || this.screenY > 1700) {
+            header.style.visibility = 'visible';
+            header.style.opacity = '1';
+            if (document.documentElement.clientWidth > 769) {
+                header.style.height = '96px';
+            } else {
+                header.style.height = '80px';
+            }
         }
-    }
-    else {
-        header.style.visibility = 'hidden';
-        header.style.opacity = '0';
-        header.style.height = '0px';
+        else {
+            header.style.visibility = 'hidden';
+            header.style.opacity = '0';
+            header.style.height = '0px';
+        }
     }
 });

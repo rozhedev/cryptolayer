@@ -7,6 +7,7 @@
 })
 
 <body>
+    @@include('chunks/_preloader.html')
     @@include('chunks/_header.html')
 
     <section class="main" id="main">
@@ -77,64 +78,41 @@
             <h2 class="title">Calculating of income</h2>
             <div class="calc__step animate__animated animate__fadeIn wow">
                 <div class="calc__step-item calc__step-item--order1">
-                    <div class="calc__step-subheader">
-                        <div class="calc__step-num">01</div>
-                        <div class="calc__step-title">Choose investment currency</div>
-                    </div>
+                    @@include("components/_step-subheader.html", {
+                    "num": "01",
+                    "label": "Choose investment currency"
+                    })
                     <div class="calc__step-currencies">
-                        <div class="calc__step-currency calc__step-currency--orange" data-currency="43500"><img
-                                class="calc__step-currency--little-mobile" src="img/common/bitcoin.svg" alt="bitcoin">
-                        </div>
-                        <div class="calc__step-currency calc__step-currency--violet" data-currency="3400"><img
-                                class="calc__step-currency--little" src="img/common/ethereum.svg" alt="ethereum">
-                        </div>
-                        <div class="calc__step-currency calc__step-currency--blue" data-currency="300"><img
-                                class="calc__step-currency--little" src="img/common/litecoin.svg" alt="litecoin">
-                        </div>
-                        <div class="calc__step-currency calc__step-currency--green" data-currency="310"><img
-                                class="calc__step-currency--little-mobile" src="img/common/dash.svg" alt="dash"></div>
-                        <div class="calc__step-currency calc__step-currency--bgcolor" data-currency="1">$</div>
+                        @@loop("components/_currency-item.html", "../json/currency-items.json")
                     </div>
                 </div>
                 <div class="calc__step-item calc__step-item--order3">
-                    <div class="calc__step-subheader">
-                        <div class="calc__step-num">03</div>
-                        <div class="calc__step-title">Input period of mining</div>
-                    </div>
+                    @@include("components/_step-subheader.html", {
+                    "num": "03",
+                    "label": "Input period of mining"
+                    })
                     <div class="calc__step-content">
                         <input type="number" class="calc__step-input" placeholder="60" id="period-mining">
                         <div class="calc__step-rule" id="min-period-mining"><span>* </span>min 30 days</div>
                     </div>
                 </div>
                 <div class="calc__step-item calc__step-item--order2">
-                    <div class="calc__step-subheader">
-                        <div class="calc__step-num">02</div>
-                        <div class="calc__step-title">Input investment
-                            amount</div>
-                    </div>
+                    @@include("components/_step-subheader.html", {
+                    "num": "02",
+                    "label": "Input investment amount"
+                    })
                     <div class="calc__step-content">
                         <input type="number" class="calc__step-input" placeholder="200" id="invest-amount">
                         <div class="calc__step-rule" id="min-amount"><span>* </span>min 100 USD</div>
                     </div>
                 </div>
                 <div class="calc__step-item calc__step-item--order4">
-                    <div class="calc__step-subheader">
-                        <div class="calc__step-num">04</div>
-                        <div class="calc__step-title">Choose withdraw currency</div>
-                    </div>
+                    @@include("components/_step-subheader.html", {
+                    "num": "04",
+                    "label": "Choose withdraw currency"
+                    })
                     <div class="calc__step-currencies">
-                        <div class="calc__step-currency2 calc__step-currency--orange" data-currency="43500"><img
-                                class="calc__step-currency--little-mobile" src="img/common/bitcoin.svg" alt="bitcoin">
-                        </div>
-                        <div class="calc__step-currency2 calc__step-currency--violet" data-currency="3400"><img
-                                class="calc__step-currency--little" src="img/common/ethereum.svg" alt="ethereum">
-                        </div>
-                        <div class="calc__step-currency2 calc__step-currency--blue" data-currency="300"><img
-                                class="calc__step-currency--little" src="img/common/litecoin.svg" alt="litecoin">
-                        </div>
-                        <div class="calc__step-currency2 calc__step-currency--green" data-currency="310"><img
-                                class="calc__step-currency--little-mobile" src="img/common/dash.svg" alt="dash"></div>
-                        <div class="calc__step-currency2 calc__step-currency--bgcolor" data-currency="1">$</div>
+                        @@loop("components/_currency-item.html", "../json/currency-items-withdraw.json")
                     </div>
                 </div>
                 <div class="calc__step-container calc__step-item--order5">
@@ -168,86 +146,14 @@
                             class="advant__cloud-img">
                     </div>
                 </div>
-                <div class="advant__item">
-                    <h4 class="advant__item-title">Purchase</h4>
-                    <div class="advant__item-inner">
-                        <div class="advant__item-home animate__animated animate__fadeInLeft wow">
-                            <img src="img/advant_and_faq/close-circle.svg" alt="close-circle" class="advant__item-img">
-                            <div class="advant__item-descr">Don’t waste time searching for
-                                equipment and waiting for delivery. Don’t spend time on customs clearance and don't
-                                attract the attention of other officials. Don’t lose money while your miner is on the
-                                way.</div>
-                        </div>
-                        <div class="advant__item-cloud animate__animated animate__fadeInRight wow">
-                            <img src="img/advant_and_faq/checkmark-circle.svg" alt="checkmark-circle"
-                                class="advant__item-img">
-                            <div class="advant__item-descr advant__item-descr--mr16">We order large batches of new
-                                miners, they pass through customs quickly and legally. You rent a miner that’s already
-                                installed in a data center and ready to work.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="advant__item">
-                    <h4 class="advant__item-title">Setup and maintenance</h4>
-                    <div class="advant__item-inner">
-                        <div class="advant__item-home animate__animated animate__fadeInLeft wow">
-                            <img src="img/advant_and_faq/close-circle.svg" alt="close-circle" class="advant__item-img">
-                            <div class="advant__item-descr">Senior technicians can mount a
-                                mining rig in 2-3 hours. It takes days for an amateur, and you lose both time and money.
-                                You are responsible for the efficiency and reliability of the rig.</div>
-                        </div>
-                        <div class="advant__item-cloud animate__animated animate__fadeInRight wow">
-                            <img src="img/advant_and_faq/checkmark-circle.svg" alt="checkmark-circle"
-                                class="advant__item-img">
-                            <div class="advant__item-descr">Our certified engineers set up new
-                                miners and monitor the operating ones. We make sure our rigs are in a perfect condition
-                                and work flawlessly.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="advant__item">
-                    <h4 class="advant__item-title">Mining facility</h4>
-                    <div class="advant__item-inner">
-                        <div class="advant__item-home animate__animated animate__fadeInLeft wow">
-                            <img src="img/advant_and_faq/close-circle.svg" alt="close-circle" class="advant__item-img">
-                            <div class="advant__item-descr">You need a reliable and
-                                well-ventilated place or endure heat and noise at your home. You constantly worry about
-                                the safety of your investments.
-                            </div>
-                        </div>
-                        <div class="advant__item-cloud animate__animated animate__fadeInRight wow">
-                            <img src="img/advant_and_faq/checkmark-circle.svg" alt="checkmark-circle"
-                                class="advant__item-img">
-                            <div class="advant__item-descr">Professional industrial
-                                infrastructure, climate control and round-the-clock supervision create the most reliable
-                                and secure mining conditions.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="advant__item">
-                    <h4 class="advant__item-title">Electricity</h4>
-                    <div class="advant__item-inner">
-                        <div class="advant__item-home animate__animated animate__fadeInLeft wow">
-                            <img src="img/advant_and_faq/close-circle.svg" alt="close-circle" class="advant__item-img">
-                            <div class="advant__item-descr">You need a cheap power source. Your
-                                residential electrical wiring will wear out quickly, leading to power outages and fires.
-                                Miners break down without a continuous power supply.
-                            </div>
-                        </div>
-                        <div class="advant__item-cloud animate__animated animate__fadeInRight wow">
-                            <img src="img/advant_and_faq/checkmark-circle.svg" alt="checkmark-circle"
-                                class="advant__item-img">
-                            <div class="advant__item-descr">We have large power supply
-                                contracts and several backup power sources are always standing by. Our electricity is
-                                reasonably priced and legal. Our data centers work without interruptions.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                @@loop("components/_advant-item.html", "../json/advant-items.json")
+
                 <form action="signup.html">
-                    <button class="advant__btn animate__animated animate__fadeIn wow">Start earning<img
-                            src="img/common/Arrow-Circle-Right.svg" alt="Arrow-Circle-Right"></button>
+                    <button class="advant__btn animate__animated animate__fadeIn wow">
+                        Start earning
+                        <img src="img/common/Arrow-Circle-Right.svg" alt="Arrow-Circle-Right">
+                    </button>
                 </form>
             </div>
         </div>
@@ -260,17 +166,7 @@
             <h2 class="title">Support payment systems</h2>
             <div class="payment__inner animate__animated animate__fadeIn wow">
                 <div class="payment__icons">
-                    <div class="payment__item payment__item--order1"><img src="img/payment/Bitcoin.svg" alt="Bitcoin">
-                    </div>
-                    <div class="payment__item payment__item--order4"><img src="img/payment/Ethereum.svg" alt="Ethereum">
-                    </div>
-                    <div class="payment__item payment__item--order2"><img src="img/payment/Maestro.svg" alt="Maestro">
-                    </div>
-                    <div class="payment__item payment__item--order5"><img src="img/payment/MasterCard.svg"
-                            alt="MasterCard"></div>
-                    <div class="payment__item payment__item--order3"><img src="img/payment/Litecoin.svg" alt="Litecoin">
-                    </div>
-                    <div class="payment__item payment__item--order6"><img src="img/payment/Dash.svg" alt="Dash"></div>
+                    @@loop("components/_payment-sys-item.html", "../json/payment-sys-items.json")
                 </div>
                 <div class="payment__text"><span>*</span> PayPal and Perfect Money will be aviable soon.</div>
             </div>
@@ -316,11 +212,7 @@
         <div class="container">
             <h2 class="title">Our partners</h2>
             <div class="our-partners__inner animate__animated animate__fadeIn wow">
-                <div class="our-partners__item"><img src="img/partners/bitmain.png" alt="bitmain"></div>
-                <div class="our-partners__item"><img src="img/partners/f2pool.png" alt="f2pool"></div>
-                <div class="our-partners__item"><img src="img/partners/kraken.png" alt="kraken"></div>
-                <div class="our-partners__item"><img src="img/partners/coinpods.png" alt="coinpods"></div>
-                <div class="our-partners__item"><img src="img/partners/poolin.png" alt="poolin"></div>
+                @@loop("components/_partner-item.html", "../json/partner-items.json")
             </div>
             <div class="questions animate__animated animate__fadeIn wow">
                 <div class="questions__title">Still have questions?</div>

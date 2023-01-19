@@ -26,7 +26,7 @@
             font-size: 32px;
             line-height: 39px;
             letter-spacing: 0.08em;
-            color: #ffffff;
+            color: $light;
             margin-bottom: 16px;
         }
         &-form {
@@ -132,7 +132,7 @@
                 line-height: 29px;
                 text-align: center;
                 letter-spacing: 0.04em;
-                color: #ffffff;
+                color: $light;
             }
             &-form {
                 flex-direction: column;

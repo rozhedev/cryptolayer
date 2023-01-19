@@ -1,0 +1,22 @@
+[
+    {
+        "imgPath": "img/partners/bitmain.png",
+        "imgAlt": "bitmain"
+    },
+    {
+        "imgPath": "img/partners/f2pool.png",
+        "imgAlt": "f2pool"
+    },
+    {
+        "imgPath": "img/partners/kraken.png",
+        "imgAlt": "kraken"
+    },
+    {
+        "imgPath": "img/partners/coinpods.png",
+        "imgAlt": "coinpods"
+    },
+    {
+        "imgPath": "img/partners/poolin.png",
+        "imgAlt": "poolin"
+    }
+]
