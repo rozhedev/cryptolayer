@@ -1,0 +1,32 @@
+[
+    {
+        "descrOrder": "about-page__descr--order1",
+        "descrAnim": "animate__fadeInLeft",
+        "descr": "<p>Cryptolayer company founded in 2017 in England. The basis idea of creating a Free Economic Zone in country Armenia for high-tech IT startups based on blockchain technology and AI (Artificial intelligence).</p><p>In October 2018, an agreement signed between Cryptolayer representatives, the British Ambassador to Armenia and the Armenian government on the establishment of a free economic zone in Armenia.</p>",
+
+        "imgOrder": "about-page__img--order2",
+        "imgAnim": "animate__fadeInRight",
+        "imgPath": "img/about/data-center1.jpg",
+        "imgAlt": "data-center1"
+    },
+    {
+        "descrOrder": "about-page__descr--order3",
+        "descrAnim": "animate__fadeInRight",
+        "descr": "<p>In December 2018, the Free Economic Zone launched in Armenia to develop the digital cluster, including support and development of mining infrastructure. The first resident of the Free Economic Zone Cryptolayer CL-M has launched its own equity mining service Cryptolayer Cloud Mining, which is located in the Free Economic Zone in Armenia.</p><p> CL-M and the Hrazdan TPP have signed an agreement on the allocation of more than 200 MW of power capacity in the Free Economic Zone, where an industrial mining center being built, designed for hundreds of thousands of devices.</p>",
+        
+        "imgOrder": "about-page__img--order4",
+        "imgAnim": "animate__fadeInLeft",
+        "imgPath": "img/about/data-center2.jpg",
+        "imgAlt": "data-center2"
+    },
+    {
+        "descrOrder": "about-page__descr--order5",
+        "descrAnim": "animate__fadeInLeft",
+        "descr": "<p>Now Cryptolayer Cloud mining is an easily accessible instrument of mining cryptocurrencies without purchasing their own equipment. We offer a flexible chain of contracts for both experienced as well as well as for those, who are pioneers.</p> <p class='about-page__descr-p--mt8'> Our company offers a simple interface, with transparent payout system every 24 hours and technical support for users 24/7.</p> <p class='about-page__descr-p--mt8'> Together with our skilled and experienced team, as well as strategic customers and partnerships we are driving a new standard for the mining ecosystem and data center infrastructure facilities. </p>",
+        
+        "imgOrder": "about-page__img--order6",
+        "imgAnim": "animate__fadeInRight",
+        "imgPath": "img/about/data-center3.jpg",
+        "imgAlt": "data-center3"
+    }
+]

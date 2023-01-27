@@ -34,10 +34,10 @@
         color: $light;
         line-height: 22px;
         text-align: justify;
-        p:last-child {
+        p:last-of-type {
             margin-top: 28px;
         }
-        &-p--mt8 {
+        p.about-page__descr-p--mt8 {
             margin-top: 8px;
         }
         &--order1 {

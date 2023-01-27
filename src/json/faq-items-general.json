@@ -1,0 +1,32 @@
+[
+    {
+        "modifClass": "",
+        "itemTitle": "What is Cryptolayer LTD?",
+        "descr": "Now Cryptolayer Cloud mining is an easily accessible instrument of mining cryptocurrencies without purchasing their own equipment. We offer a flexible chain of contracts for both experienced as well as well as for those, who are pioneers. <a href='about.html' class='faq__item-link'>Read more...</a>"
+    },
+    {
+        "modifClass": "",
+        "itemTitle": "What is сloud mining?",
+        "descr": "Cloud mining (or Shared mining) is a mode of gaining bitcoin or any other cryptocurrency without using personal devices. Users of shared mining services buy contracts allowing them to “rent” the devices from the owners of large data centers and gain the funds mined by those devices."
+    },
+    {
+        "modifClass": "",
+        "itemTitle": "What is partner program?",
+        "descr": "With partner program, you can earn money, advertising our system to others. We offer 3-level partner program with 5%-2%-1% commission. Send your partner link to friends, family or share them on social media.<br> <a href='index.html#partner-program' class='faq__item-link'>Read more...</a>"
+    },
+    {
+        "modifClass": "faq__item--row2",
+        "itemTitle": "Who can become an <br>investor of the company?",
+        "descr": "Any competent person who has reached the age of majority according to the laws of his country (or in any case, no less than 18 years old) can become an investor of Cryptolayer LTD."
+    },
+    {
+        "modifClass": "faq__item--row2",
+        "itemTitle": "How much does it cost to <br>register on the platform?",
+        "descr": "Registration is free. To participate in cloud mining, you need to make a deposit depending on the chosen mining algorithm and cryptocurrency."
+    },
+    {
+        "modifClass": "faq__item--row2",
+        "itemTitle": "Can I create multiple <br>accounts?",
+        "descr": "No, multiple registrations on Cryptolayer platform are prohibit. Such accounts will suspend and the associated funds will block."
+    }
+]

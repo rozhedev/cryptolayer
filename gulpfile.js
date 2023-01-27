@@ -31,6 +31,7 @@ let { src, dest } = require("gulp"),
     gulp = require("gulp"),
     browsersync = require("browser-sync").create(),
     fileinclude = require("gulp-file-include"),
+    del = require("del"),
     htmlmin = require("gulp-htmlmin"),
     scss = require("gulp-sass")(require("dart-sass")),
     autoprefixer = require("gulp-autoprefixer"),
@@ -105,6 +106,10 @@ function json() {
 		.pipe(browsersync.stream());
 }
 
+function clean() {
+    return del(path.clean);
+}
+
 function images() {
     return src(path.src.img)
         .pipe(
@@ -144,7 +149,7 @@ function watchFiles() {
     gulp.watch([path.watch.img], images);
 }
 
-let build = gulp.series(gulp.parallel(html, css, js, fonts, images));
+let build = gulp.series(clean, gulp.parallel(html, css, fonts, js, images));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.html = html;

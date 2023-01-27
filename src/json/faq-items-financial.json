@@ -1,0 +1,32 @@
+[
+    {
+        "modifClass": "",
+        "itemTitle": "How do I top up my <br>balance?",
+        "descr": "You need go to the page 'Balance'. Then select one of the provided payment systems (specify the amount required only for the deposit in USD) and click 'Deposit'. The system will generate for you wallet address to which you should make deposit."
+    },
+    {
+        "modifClass": "",
+        "itemTitle": "How to buy power of <br> mining?",
+        "descr": "You need to go to the 'Buy Mining Power' page. You need to specify the amount and the payment system with which you want to buy power. Choose one of the three provided ways of mining cryptocurrencies and click on the 'Buy Mining Power' button."
+    },
+    {
+        "modifClass": "",
+        "itemTitle": "How long do I have to <br> wait for withdrawal?",
+        "descr": "The waiting time for withdrawal does not exceed 6 hours on all days of the year (including weekends and holidays). In our 24/7 work, our operators always make payouts as quickly as possible."
+    },
+    {
+        "modifClass": "faq__item--row2",
+        "itemTitle": "What is the minimum <br> purchase to start mining?",
+        "descr": "To start mining, the first purchase should be no less than:<br> SCRYPT - 790 MH/s (100,33 USD)<br> ETHASH - 305 MH/s (100,04 USD)<br> SHA-256 - 60 MH/s (102,42 USD)<br>"
+    },
+    {
+        "modifClass": "faq__item--row2",
+        "itemTitle": "What is the minimum <br>amout to withdraw profit?",
+        "descr": "Withdrawal of profit is available when the following values on the balance of the user:<br> 5 USD<br> 0.002 BTC<br> 0.012 ETH<br> 0.016 DASH<br> 0.025 LTC<br>"
+    },
+    {
+        "modifClass": "faq__item--row2",
+        "itemTitle": "Can I exchange cryptocur-<br>rency profits to USD?",
+        "descr": "Yes, of course, you need to go to the 'Mining' page and opposite each cryptocurrency you will see the 'Exchange to USD' button. As soon as you click this button, the currency will instantly be exchanged for USD."
+    }
+]
