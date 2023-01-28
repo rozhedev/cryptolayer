@@ -19,11 +19,21 @@
         font-size: 24px;
         font-weight: 600;
         line-height: 29px;
-        transition: .7s all;
-        img {
+        transition: 0.7s all;
+       
+        svg {
+            width: 32px;
+            height: 32px;
             margin-right: 16px;
+            path {
+                fill: $light;
+                transition: 0.7s fill;
+            }
         }
         &:hover {
+            svg path {
+                fill: $orange;
+            }
             color: $orange;
         }
     }
